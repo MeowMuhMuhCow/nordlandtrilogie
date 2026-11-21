@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "titel": "Nordlandtrilogie - Gemeinsamer Starter",
+  "spiele": [
+    {
+      "id": "schicksalsklinge",
+      "teil": 1,
+      "version": "Fanpatch v1.5i",
+      "name": "Die Schicksalsklinge",
+      "untertitel": "Das Schwarze Auge - Teil 1 (1992)",
+      "status": "verfuegbar",
+      "status_wenn_exe_fehlt": "noch nicht verfuegbar",
+      "port_ordner": "Schicksalsklinge/Nativ",
+      "port_ordner_alternativen": [
+        "Schicksalsklinge",
+        ".",
+        "release",
+        "../Port/release"
+      ],
+      "dos_ordner": "Schicksalsklinge/DOS",
+      "browser_url": "https://meowmuhmuhcow.github.io/schicksalsklinge/",
+      "browser_status": "verfuegbar",
+      "exe_stufen": {
+        "original": "SCHICK_PORT_ORIG.EXE",
+        "wichtig": "SCHICK_PORT_WICHTIG.EXE",
+        "alles": "SCHICK_PORT_ALLES.EXE",
+        "standard": "SCHICK_PORT.EXE"
+      },
+      "kennungsdatei": "SCHICK.DAT",
+      "pflichtdateien": [
+        "SCHICK.DAT",
+        "DSAGEN.DAT",
+        "SCHICKM.EXE"
+      ],
+      "erwartete_exe_datei": "SCHICKM.EXE",
+      "erwartete_exe_groesse": 556208,
+      "erwartete_exe_md5": "4ce035f95ead01a8b2553b4487544e5d",
+      "gog_pfade": [
+        "C:\\Program Files (x86)\\GOG Galaxy\\Games\\Realms of Arkania",
+        "C:\\Program Files\\GOG Galaxy\\Games\\Realms of Arkania",
+        "C:\\GOG Games\\Realms of Arkania",
+        "D:\\GOG Games\\Realms of Arkania",
+        "C:\\GOG Games\\Realms of Arkania - Blade of Destiny",
+        "D:\\GOG Games\\Realms of Arkania - Blade of Destiny",
+        "C:\\GOG Games\\Realms of Arkania - Blade of Destiny German",
+        "C:\\Program Files (x86)\\GOG Galaxy\\Games\\Realms of Arkania - Blade of Destiny German"
+      ],
+      "fenster_optionen": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "vollbild"
+      ],
+      "skalierung_optionen": [
+        "ganzzahlig",
+        "fuellend"
+      ],
+      "probenlog": true,
+      "probenlog_skript": "Schicksalsklinge/Nativ/Probenlog/probenlog_fenster.ps1"
+    },
+    {
+      "id": "sternenschweif",
+      "teil": 2,
+      "version": "Fanpatch v1.3",
+      "name": "Sternenschweif",
+      "untertitel": "Das Schwarze Auge - Teil 2 (1994)",
+      "status": "verfuegbar",
+      "status_wenn_exe_fehlt": "noch nicht verfuegbar",
+      "port_ordner": "Sternenschweif/Nativ",
+      "port_ordner_alternativen": [
+        "Sternenschweif",
+        ".",
+        "release",
+        "../Port/release"
+      ],
+      "dos_ordner": "Sternenschweif/DOS",
+      "browser_url": "https://meowmuhmuhcow.github.io/sternenschweif/",
+      "browser_status": "verfuegbar",
+      "exe_stufen": {
+        "original": "SCHWEIF_PORT_ORIG.EXE",
+        "wichtig": "SCHWEIF_PORT_WICHTIG.EXE",
+        "alles": "SCHWEIF_PORT_ALLES.EXE",
+        "standard": "SCHWEIF_PORT.EXE"
+      },
+      "kennungsdatei": "SCHWEIF.EXE",
+      "pflichtdateien": [
+        "SCHWEIF.EXE",
+        "DATA\\STAR.DAT"
+      ],
+      "erwartete_exe_datei": "SCHWEIF.EXE",
+      "erwartete_exe_groesse": 1387552,
+      "erwartete_exe_md5": "da3b59ce86a82e4b8bb14d36ed37d4d0",
+      "gog_pfade": [
+        "C:\\Program Files (x86)\\GOG Galaxy\\Games\\Realms of Arkania 2",
+        "C:\\Program Files\\GOG Galaxy\\Games\\Realms of Arkania 2",
+        "C:\\GOG Games\\Realms of Arkania 2",
+        "D:\\GOG Games\\Realms of Arkania 2",
+        "C:\\GOG Games\\Realms of Arkania - Star Trail",
+        "D:\\GOG Games\\Realms of Arkania - Star Trail"
+      ],
+      "fenster_optionen": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "vollbild"
+      ],
+      "skalierung_optionen": [
+        "ganzzahlig",
+        "fuellend"
+      ],
+      "probenlog": true,
+      "probenlog_skript": "Sternenschweif/Nativ/Probenlog/probenlog_fenster.ps1"
+    },
+    {
+      "id": "riva",
+      "teil": 3,
+      "version": "Fanpatch v1.0",
+      "name": "Schatten über Riva",
+      "untertitel": "Das Schwarze Auge - Teil 3 (1996)",
+      "status": "verfuegbar",
+      "status_wenn_exe_fehlt": "noch nicht verfuegbar",
+      "port_ordner": "Riva/Nativ",
+      "port_ordner_alternativen": [
+        "Riva/Nativ/bin",
+        "Riva",
+        "riva",
+        "bin",
+        ".",
+        "../Riva_Nativ"
+      ],
+      "dos_ordner": "Riva/DOS",
+      "browser_url": "https://meowmuhmuhcow.github.io/riva/",
+      "browser_status": "verfuegbar",
+      "exe_stufen": {
+        "original": "RIVA_PORT_ORIG.EXE",
+        "wichtig": "RIVA_PORT_WICHTIG.EXE",
+        "alles": "RIVA_PORT_ALLES.EXE",
+        "standard": "RIVA_PORT.EXE"
+      },
+      "kennungsdatei": "RIVA.EXE",
+      "pflichtdateien": [
+        "RIVA.EXE",
+        "DATA\\RIVA.ALF"
+      ],
+      "erwartete_exe_datei": "RIVA.EXE",
+      "erwartete_exe_groesse": 2477899,
+      "erwartete_exe_md5": "fb8f5fc3ba5454c7344c17aaf362de35",
+      "gog_pfade": [
+        "C:\\Program Files (x86)\\GOG Galaxy\\Games\\Realms of Arkania 3",
+        "C:\\Program Files\\GOG Galaxy\\Games\\Realms of Arkania 3",
+        "C:\\GOG Games\\Realms of Arkania 3",
+        "D:\\GOG Games\\Realms of Arkania 3",
+        "C:\\Program Files (x86)\\GOG Galaxy\\Games\\Realms of Arkania - Shadows over Riva",
+        "C:\\Program Files\\GOG Galaxy\\Games\\Realms of Arkania - Shadows over Riva",
+        "C:\\GOG Games\\Realms of Arkania - Shadows over Riva",
+        "D:\\GOG Games\\Realms of Arkania - Shadows over Riva"
+      ],
+      "fenster_optionen": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "vollbild"
+      ],
+      "skalierung_optionen": [
+        "ganzzahlig",
+        "fuellend"
+      ],
+      "probenlog": true,
+      "probenlog_skript": "Riva/Nativ/Probenlog/probenlog_fenster.ps1"
+    }
+  ]
+}

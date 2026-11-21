@@ -1,0 +1,760 @@
+{
+  "spiel_id": "riva",
+  "spiel_name": "Schatten über Riva",
+  "aktuelle_version": "v1.0",
+  "github_url": "https://github.com/MeowMuhMuhCow/riva/blob/main/BUGFIXES.md",
+  "versionen": [
+    {
+      "version": "v1.0",
+      "datum": "16.11.2026",
+      "titel": "Erste Veröffentlichung der Bugfix-Edition (52 behobene Fehler und Live-Probenlog)",
+      "text": "Alle 52 Fehlerbehebungen (31 in Stufe Wichtig, 21 zusätzlich in Alle) wurden direkt am vollständig bytegleich rekonstruierten C++-Quelltext von Version 1.12 umgesetzt – darunter verschwundene Waffen beim Schmied (samt Schwert des Artherion), unheilbarer Dumpfschädel nach der Windsbraut, falsch angelegter Stirnreif beim Sternenschweif-Import, verlorene Gegenstände beim Destructibo und die feststeckende Lorenfahrt in der Zwergenbinge.",
+      "korrekturen": [
+        {
+          "nr": "R001",
+          "art": "neu"
+        },
+        {
+          "nr": "R002",
+          "art": "neu"
+        },
+        {
+          "nr": "R003",
+          "art": "neu"
+        },
+        {
+          "nr": "R004",
+          "art": "neu"
+        },
+        {
+          "nr": "R005",
+          "art": "neu"
+        },
+        {
+          "nr": "R006",
+          "art": "neu"
+        },
+        {
+          "nr": "R008",
+          "art": "neu"
+        },
+        {
+          "nr": "R009",
+          "art": "neu"
+        },
+        {
+          "nr": "R010",
+          "art": "neu"
+        },
+        {
+          "nr": "R011",
+          "art": "neu"
+        },
+        {
+          "nr": "R012",
+          "art": "neu"
+        },
+        {
+          "nr": "R015",
+          "art": "neu"
+        },
+        {
+          "nr": "R016",
+          "art": "neu"
+        },
+        {
+          "nr": "R021",
+          "art": "neu"
+        },
+        {
+          "nr": "R026",
+          "art": "neu"
+        },
+        {
+          "nr": "R033",
+          "art": "neu"
+        },
+        {
+          "nr": "R040",
+          "art": "neu"
+        },
+        {
+          "nr": "R042",
+          "art": "neu"
+        },
+        {
+          "nr": "R043",
+          "art": "neu"
+        },
+        {
+          "nr": "R044",
+          "art": "neu"
+        },
+        {
+          "nr": "R045",
+          "art": "neu"
+        },
+        {
+          "nr": "R049",
+          "art": "neu"
+        },
+        {
+          "nr": "R052",
+          "art": "neu"
+        },
+        {
+          "nr": "R054",
+          "art": "neu"
+        },
+        {
+          "nr": "R055",
+          "art": "neu"
+        },
+        {
+          "nr": "R056",
+          "art": "neu"
+        },
+        {
+          "nr": "R058",
+          "art": "neu"
+        },
+        {
+          "nr": "R068",
+          "art": "neu"
+        },
+        {
+          "nr": "R072",
+          "art": "neu"
+        },
+        {
+          "nr": "R084",
+          "art": "neu"
+        },
+        {
+          "nr": "R092",
+          "art": "neu"
+        },
+        {
+          "nr": "R007",
+          "art": "neu"
+        },
+        {
+          "nr": "R013",
+          "art": "neu"
+        },
+        {
+          "nr": "R014",
+          "art": "neu"
+        },
+        {
+          "nr": "R017",
+          "art": "neu"
+        },
+        {
+          "nr": "R025",
+          "art": "neu"
+        },
+        {
+          "nr": "R027",
+          "art": "neu"
+        },
+        {
+          "nr": "R028",
+          "art": "neu"
+        },
+        {
+          "nr": "R029",
+          "art": "neu"
+        },
+        {
+          "nr": "R030",
+          "art": "neu"
+        },
+        {
+          "nr": "R037",
+          "art": "neu"
+        },
+        {
+          "nr": "R038",
+          "art": "neu"
+        },
+        {
+          "nr": "R039",
+          "art": "neu"
+        },
+        {
+          "nr": "R041",
+          "art": "neu"
+        },
+        {
+          "nr": "R047",
+          "art": "neu"
+        },
+        {
+          "nr": "R051",
+          "art": "neu"
+        },
+        {
+          "nr": "R053",
+          "art": "neu"
+        },
+        {
+          "nr": "R059",
+          "art": "neu"
+        },
+        {
+          "nr": "R071",
+          "art": "neu"
+        },
+        {
+          "nr": "R074",
+          "art": "neu"
+        },
+        {
+          "nr": "R076",
+          "art": "neu"
+        },
+        {
+          "nr": "R077",
+          "art": "neu"
+        }
+      ]
+    }
+  ],
+  "korrekturen": [
+    {
+      "nr": "R052",
+      "titel": "Lorenfahrt in der Zwergenbinge überspringt Kampf und Schrankenöffnung, wenn alle Helden die GE-Probe bestehen",
+      "was_war_falsch": "Bei der Lorenfahrt in der Zwergenbinge müssen alle Helden eine um 8 erschwerte Gewandtheitsprobe ablegen. Besteht ausgerechnet die gesamte Gruppe diese schwere Probe, werden der anschließende Kampf und das Öffnen der Schranke übersprungen und die Lorenfahrt hängt fest.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons, Orte & Quests (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R054",
+      "titel": "Sinnesschärfe-Warnung bei einer Falle erscheint nur bei misslungener statt bei bestandener Probe",
+      "was_war_falsch": "An einer Gefahrenstelle im Dungeon erhalten die Helden den rettenden Warnhinweis nur dann, wenn ihre Sinnesschärfe-Probe misslingt, während aufmerksame Helden bei bestandener Probe ohne jede Warnung hineinlaufen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons, Orte & Quests (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R055",
+      "titel": "Die 20. Straßenbegegnung in Riva wird niemals ausgelöst oder zurückgesetzt",
+      "was_war_falsch": "Bei der Auswahl und Verwaltung der 20 Straßenbegegnungen im Stadtgebiet von Riva wird der 20. Eintrag in der Begegnungstabelle durch einen Schleifenfehler nie gezählt und nie zurückgesetzt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons, Orte & Quests (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R056",
+      "titel": "Seil-/Hebel-Schalter im Schlossturm lässt sich nicht zurückschalten und liest bei Index -1 vor dem Array",
+      "was_war_falsch": "In den oberen Ebenen des Schlossturms (castle_t3) bleibt ein Seil-/Hebelzustand nach dem ersten Betätigen dauerhaft auf 1 hängen, und bei nicht gefundenem Raumeintrag (-1) liest das Spiel vor dem Anfang einer Koordinatentabelle.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons, Orte & Quests (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R058",
+      "titel": "Zufallsschaden auf dem Schiff verringert sich mit jedem getroffenen Helden",
+      "was_war_falsch": "Erleidet die Heldengruppe auf dem Schiff (ship_t1) gruppenweiten Zufallsschaden, bekommt der erste Held den vollen Zufallsbereich ab, während für jeden folgenden Helden die Obergrenze immer weiter schrumpft (oft bis auf 1 Punkt).",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons, Orte & Quests (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R068",
+      "titel": "Endlosschleife an den Gangfallen im Magierturm, wenn nur noch der Anführer bei Bewusstsein ist",
+      "was_war_falsch": "Wird auf der dritten Ebene des Magierturms (tower3_t2) eine der Sicherheitsfallen untersucht, während in einer mehrköpfigen Gruppe außer dem Anführer alle übrigen Gruppenmitglieder bewusstlos oder tot sind, friert das Spiel in einer Endlosschleife ein.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons, Orte & Quests (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R051",
+      "titel": "Zurückgelassene Teilgruppe am Gegenhebel im Magierturm wird nach dem Kampf nicht wiedervereinigt",
+      "was_war_falsch": "Im Magierturm muss die Gruppe geteilt werden, um zwei Hebel zu bedienen. Wenn die aktive Teilgruppe nach dem Hebelkampf automatisch auf Ebene 20 teleportiert wird, bleibt die zweite Teilgruppe allein am Gegenhebel auf der alten Ebene zurück und muss mühsam von Hand nachgeführt werden.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons, Orte & Quests (11)",
+      "herkunft": "Crystals-DSA-Foren: Gruppenteilung bei den Hebeln im Magierturm"
+    },
+    {
+      "nr": "R059",
+      "titel": "Einmal-Ereignis auf Feld 0x385 im Enddungeon setzt sein Auslöse-Flag nicht",
+      "was_war_falsch": "Ein eigentlich einmaliges Ereignis auf Feld 0x385 im Enddungeon (final2) wird bei jedem erneuten Betreten des Feldes wieder ausgelöst.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons, Orte & Quests (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R071",
+      "titel": "Folge-Ereignis 0x1f41 beim Aufbrauchen eines Vorrats (0x322 / 0x182) wird nie ausgelöst",
+      "was_war_falsch": "Nimmt man bei Ereignis 0x322 (gz_08cb00) oder f_08dae0 (gz_08dae0_rand910a) die letzten verbleibenden Stücke des Vorrats 0x182 an sich, wird das dafür vorgesehene Folge-Flag 0x1f41 nicht beim Erreichen von 0 gesetzt.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons, Orte & Quests (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R074",
+      "titel": "Kopierfehler in den Dialogbedingungen case 42 und case 43",
+      "was_war_falsch": "Zwei Dialogzweige (case 42 und case 43) reagieren auf dieselbe Statusvariable wie case 40/41, statt das eigentlich zugehörige Nachbar-Flag abzufragen.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons, Orte & Quests (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R076",
+      "titel": "Flut-Timer nach dem Öffnen von Truhe 0x489 in der Kanalisation startet nie",
+      "was_war_falsch": "Öffnet und plündert man die gesicherte Truhe auf Feld 0x489 in der Kanalisation, sollte eigentlich der Flut-Timer (d_1c01a0 = 1) anlaufen — im Originalspiel gab die Truhenfunktion jedoch stets 0 an den Aufrufer zurück.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons, Orte & Quests (11)",
+      "herkunft": "Crystals-DSA-Foren: Truhe und Wasserstand in der Kanalisation"
+    },
+    {
+      "nr": "R012",
+      "titel": "Absturz beim Abbrechen der Gruppenteilung",
+      "was_war_falsch": "Wählt man das Teilen der Heldengruppe an, bricht die Auswahl der abzuspaltenen Helden jedoch ohne Ergebnis ab, kann das Spiel sofort abstürzen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden, Gruppe & Inventar (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R015",
+      "titel": "Importierter Stirnreif (MR +2) aus Sternenschweif landet auf dem Brust-Slot statt auf dem Kopf",
+      "was_war_falsch": "Importiert man eine Heldengruppe aus Sternenschweif, die den blauen magischen Stirnreif (Gegenstand 0xd9, Magieresistenz +2) trägt, liegt der Stirnreif nach dem Import auf dem Brust-/Hals-Slot statt auf dem Kopf-Slot und verleiht beim Import keinen MR-Bonus.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden, Gruppe & Inventar (11)",
+      "herkunft": "Crystals-DSA-Foren: Stirnreif / Import aus Sternenschweif"
+    },
+    {
+      "nr": "R021",
+      "titel": "Verlorene Giftladungen beim Stapeln von Projektilen & falsche Pluralform beim Gegenstandstausch",
+      "was_war_falsch": "Legt man im Inventar vergiftete Pfeile, Bolzen oder Wurfwaffen auf einen noch unvergifteten Stapel gleichen Typs (Gesamtmenge ≤ 99), erhält der kombinierte Stapel zwar die Giftmarkierung, aber 0 Giftladungen (das Gift ist sofort wirkungslos); außerdem prüft die Fehlermeldung beim unzulässigen Tausch zweier Gegenstände die Stapelbarkeit des falschen Gegenstands.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden, Gruppe & Inventar (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R026",
+      "titel": "Unheilbarer Dumpfschädel nach der Windsbraut (Körperkraft und Gewandtheit kehren nie zurück)",
+      "was_war_falsch": "Auf dem Piratenschiff Windsbraut erkranken die Helden häufig an Dumpfschädel (Körperkraft −2, Gewandtheit −2). Selbst wenn die Krankheit später geheilt wird oder von selbst in die Abklingphase wechselt, steigen die verlorenen Attributspunkte nie wieder an und der Status „krank“ verschwindet das ganze restliche Spiel über nicht mehr.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden, Gruppe & Inventar (11)",
+      "herkunft": "Crystals-DSA-Foren: Dumpfschädel auf der Windsbraut heilt nie"
+    },
+    {
+      "nr": "R033",
+      "titel": "Expurgicum schädigt den Anwender statt des Ziels und Gegenstand 0x17 hinterlässt eine Glasflasche",
+      "was_war_falsch": "Wird das alchemistische Mittel Expurgicum (0xa6) angewendet, zieht das Spiel den Schaden vom benutzenden Helden statt vom ausgewählten Ziel ab; außerdem entsteht beim Benutzen von Gegenstand 0x17 fälschlich eine leere Glasflasche (0x1f) im Inventar.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden, Gruppe & Inventar (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R013",
+      "titel": "Doppelte Ortsprüfung bei der Lebensenergie-Regeneration und im Talentmenü",
+      "was_war_falsch": "Bei der Sonderprüfung für die Lebensenergie-Regeneration sowie beim Aufbau des Talent-Auswahlmenüs auf bestimmten Karten (0x30000 / 0x30001) wird die zweite Karte durch einen Kopierfehler ignoriert.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Helden, Gruppe & Inventar (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R025",
+      "titel": "Alchemie-Braudauer wird in Tagen statt Stunden geprüft, Array-Unterlauf bei Abbruch & leere Gruppe bei Rezept 0x153",
+      "was_war_falsch": "Bricht man im Alchemie-Menü die Rezeptauswahl sofort ab (Auswahl 0), liest das Spiel vor dem Arrayanfang; wählt man ein aufwendiges Rezept (über 8 Stunden Braudauer), lässt es sich selbst dann noch starten, wenn bis zum Ablauf der verfügbaren Ruhezeit gar nicht mehr genug Stunden übrig sind; braut außerdem ein einzelner Held in einer 1-Personen-Teilgruppe das Scherzrezept 0x153 (Geldscheißer), verlässt er die Gruppe und hinterlässt eine leere, unspielbare Gruppe.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": true,
+      "bereich": "Helden, Gruppe & Inventar (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R029",
+      "titel": "Manuelle Talent- und Zaubersteigerung verbraucht bei Wert 18 sinnlos Steigerungsversuche",
+      "was_war_falsch": "Hat ein Held bei einem Talent oder Zauber bereits den Wert 18 erreicht und klickt der Spieler beim Stufenaufstieg im manuellen Modus (ohne automatisches Auswürfeln) nochmals darauf, schlägt die Probe garantiert fehl (3W6 > 18 ist unmöglich), zieht aber trotzdem einen wertvollen Steigerungsversuch ab.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Helden, Gruppe & Inventar (11)",
+      "herkunft": "Crystals-DSA-Foren: Bugliste Schatten über Riva — Steigerungsversuche bei 18"
+    },
+    {
+      "nr": "R038",
+      "titel": "Nicht stapelbare Gegenstände verlieren beim Zusammenlegen in Truhen ihre individuellen Eigenschaften",
+      "was_war_falsch": "Legt man in eine Truhe einen zweiten gleichartigen, aber eigentlich nicht stapelbaren Gegenstand (z. B. eine zweite Waffe, Rüstung oder einen Stab mit eigener Ladungszahl/Beschädigung), verschmilzt die Truhe beide zu einem Stapel und überschreibt die individuellen Zustandsdaten des zweiten Stücks.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Helden, Gruppe & Inventar (11)",
+      "herkunft": "Crystals-DSA-Foren: Truhen-Inventar und Gegenstandszustand"
+    },
+    {
+      "nr": "R053",
+      "titel": "Veralteter NPC-Zähler beim Entlassen mehrerer Gruppenmitglieder im Tempel",
+      "was_war_falsch": "Entlässt man in der Gruppenverwaltung zunächst den begleitenden NPC und direkt im selben Durchlauf weitere Helden aus der Gruppe, rechnet die Schleifenbedingung für die Mindestgruppengröße noch mit dem bereits entlassenen NPC.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Helden, Gruppe & Inventar (11)",
+      "herkunft": "Crystals-DSA-Foren: Bugliste Schatten über Riva — Helden/NPC entlassen"
+    },
+    {
+      "nr": "R077",
+      "titel": "Überlappendes memcpy und übersprungene Doppellücken beim Nachrücken der Gruppenplätze",
+      "was_war_falsch": "Werden mehrere nebeneinanderliegende Heldenplätze in der Gruppe frei, rückt die Kompaktierungsfunktion beim ersten Durchlauf nur einen Platz nach und kopiert überlappende Speicherbereiche mit memcpy.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Helden, Gruppe & Inventar (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R001",
+      "titel": "Absturz beim Programmstart durch uninitialisierte DPMI-Registerstruktur",
+      "was_war_falsch": "Beim Starten des Spiels oder beim Umschalten des Grafik-/Speichermodus unter DOS/DPMI kann das Spiel mit einem Schutzverletzungsfehler abstürzen, weil der DPMI-Interrupt 0x31 mit zufälligen Müllwerten auf dem Stack aufgerufen wird.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Technik, Grafik & Speicher (8)",
+      "herkunft": "Offizieller Patch 1.12 Punkt 1 („Abstürze beim Starten beseitigt“ — im Code von V1.12 war der vertauschte memset-Aufruf dennoch verblieben); siehe Crystals-DSA-Foren: Patch-Historie / Bekannte Bugs."
+    },
+    {
+      "nr": "R002",
+      "titel": "Grafikfehler oder schwarzer Bildschirm auf VESA-Karten mit zwei Speicherfenstern",
+      "was_war_falsch": "Auf SVGA-/VESA-Grafikkarten, die neben dem primären Speicherfenster A (WinASegment) auch ein zweites Fenster B (WinBSegment) unterstützen, greift die Bildschirmausgabe ins Leere oder zeigt Bildstörungen; schlägt zudem die VESA-ModeInfo-Abfrage fehl, teilt die Bank-Initialisierung durch Null.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Technik, Grafik & Speicher (8)",
+      "herkunft": "Offizieller Patch 1.12 Punkt 2 („Probleme mit diversen VESA-Treibern beseitigt“)."
+    },
+    {
+      "nr": "R003",
+      "titel": "Zufälliges Verhalten der CD-Audio-Abfrage ohne geöffnetes CD-Laufwerk",
+      "was_war_falsch": "Ist kein CD-Laufwerk geöffnet oder wird ohne eingelegte Musik-CD gespielt, kann die Statusabfrage der CD-Musik zufällige Werte liefern und unnötige Treiberbefehle auslösen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Technik, Grafik & Speicher (8)",
+      "herkunft": "Offizieller Patch 1.12 Punkt 3 („Probleme mit diversen CD-ROM-Treibern beseitigt“)."
+    },
+    {
+      "nr": "R004",
+      "titel": "Uninitialisierte letzte 4 Nutzdatenbytes und Tabellen-Unterlauf in der Heap-Speicherverwaltung",
+      "was_war_falsch": "Bei jeder Speicheranforderung über den zentralen Heap-Allokator bleiben die letzten 4 Bytes des angeforderten Speicherblocks uninitialisiert (statt wie beabsichtigt genullt); sind außerdem alle 2.500 Tracking-Slots belegt, schreibt die Verwaltung vor den Anfang der Überwachungstabelle d_1bc614.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Technik, Grafik & Speicher (8)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R005",
+      "titel": "Zu kleiner Lesepuffer und veralteter Index beim Laden aus .ALF-Archiven",
+      "was_war_falsch": "Beim Nachladen großer Datenblöcke aus den Archivdateien (RIVA.ALF / DATA.ALF) kann ein zu klein bemessener Puffer überlaufen oder ein veralteter Gruppenindex im Cache stehen bleiben.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Technik, Grafik & Speicher (8)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R006",
+      "titel": "Absturz durch Dangling-Pointer und Array-Überlauf in der ACE-Animations-Engine",
+      "was_war_falsch": "Schlägt das Laden einer .ACE-Animation fehl oder enthält eine Animationssequenz ungewöhnlich viele Einträge, kann das Spiel beim Aufräumen mit einem Speicherfehler abstürzen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Technik, Grafik & Speicher (8)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R008",
+      "titel": "Verzerrte nicht-quadratische 3D-Texturen und fehlerhafte Mipmap-Verkleinerung",
+      "was_war_falsch": "Rechteckige (nicht-quadratische) Texturen in der 3D-Ansicht von Stadt und Dungeons werden gestaucht oder abgeschnitten dargestellt, und bei starker Texturverkleinerung (ab Stufe 3) geraten die Folgebilder animierter Texturen durcheinander.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Technik, Grafik & Speicher (8)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R007",
+      "titel": "Fehlende Kapazitätsprüfung im ACE-Variablenregister",
+      "was_war_falsch": "Werden in einer komplexen .ACE-Animationssequenz mehr Variablen registriert als im dynamischen Array vorgesehen, schreibt die Engine über das Ende des Puffers hinaus.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik, Grafik & Speicher (8)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R042",
+      "titel": "Hexenspeichel heilt auch ohne ausreichende Astralenergie",
+      "was_war_falsch": "Beim Zauber Hexenspeichel kann der Spieler beliebig viele Lebenspunkte heilen, selbst wenn der Zaubernde fast keine Astralenergie mehr übrig hat (die AE fällt anschließend auf 0, die volle Heilung wird aber trotzdem gewährt).",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Magie (7)",
+      "herkunft": "Crystals-DSA-Foren: Bugliste Schatten über Riva — Zaubern ohne genug AE"
+    },
+    {
+      "nr": "R043",
+      "titel": "Armatrutz bietet im Auswahlmenü 1 Punkt mehr Rüstungsschutz an, als die AE bezahlen kann",
+      "was_war_falsch": "Beim Zauber Armatrutz (Kosten: RS² Astralpunkte) erlaubt das Auswahlmenü stets eine Stufe Rüstungsschutz mehr, als der Magier mit seiner aktuellen Astralenergie eigentlich bezahlen kann (z. B. RS +4 für 16 AE bei nur 10 vorhandener AE).",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Magie (7)",
+      "herkunft": "Crystals-DSA-Foren: Bugliste Schatten über Riva — Zaubern ohne genug AE"
+    },
+    {
+      "nr": "R044",
+      "titel": "Doppelte Fehlermeldung und verbrauchter Zauberzug bei bereits aktivem Axxeleratus",
+      "was_war_falsch": "Zaubert man Axxeleratus auf einen Helden, der bereits unter der Wirkung von Axxeleratus steht, gibt das Spiel nach dem Hinweis noch eine zweite unpassende Fehlermeldung aus.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Magie (7)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R045",
+      "titel": "Uninitialisierter Stackwert beim Gegenstandszauber ohne passenden Gegenstand im Inventar",
+      "was_war_falsch": "Wird der Gegenstandszauber (f_1127e0) gesprochen, obwohl der Zaubernde weder Fackel (0x41) noch Laterne (0x19) im Inventar trägt, liest die Funktion eine uninitialisierte lokale Variable vom Stack und bricht nicht sauber ab.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Magie (7)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R049",
+      "titel": "Destructibo vernichtet den Gegenstand selbst dann, wenn die Astralenergie nicht ausreicht",
+      "was_war_falsch": "Wendet man den Entzauberungs-Spruch Destructibo auf einen magischen Gegenstand an und würfelt das Spiel höhere AE-Kosten (5W10 + Permanenz) aus, als der Magier besitzt, schlägt der Zauber wegen AE-Mangels fehl — der Gegenstand ist aber trotzdem unwiederbringlich aus dem Inventar gelöscht!",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Magie (7)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R041",
+      "titel": "Zauber mit variablen Kosten, Karnifilo und Untoten-Zauber prüfen die AE unvollständig",
+      "was_war_falsch": "Zauber mit variabler Kostenberechnung lassen sich auch mit 0 AE anwählen; beim Karnifilo Raserei wird die Wirkung bereits auf das Ziel gelegt, bevor geprüft wird, ob die AE ausreicht, und bei Untoten-Zaubern (f_10f910) wird das Erfolgsflag d_1c0424 vor der AE-Prüfung gesetzt.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": true,
+      "bereich": "Magie (7)",
+      "herkunft": "Crystals-DSA-Foren: Bugliste Schatten über Riva — Zaubern ohne genug AE"
+    },
+    {
+      "nr": "R047",
+      "titel": "Doppelte Fehlermeldung beim Zaubern von Transversalis an verbotenen Orten",
+      "was_war_falsch": "Versucht man an einem Ort, an dem Transversalis Teleport gesperrt ist, zu teleportieren, erscheint nach der Orts-Fehlermeldung noch eine zweite allgemeine Zauber-Fehlermeldung.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Magie (7)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R009",
+      "titel": "Absturz beim Entnehmen des letzten Gegenstands aus einer Bestandsliste",
+      "was_war_falsch": "Wird beim Händler, Schmied oder in einem Warenlager der allerletzte verbleibende Gegenstand aus der Bestandsliste entnommen, greift das Spiel auf einen Nullzeiger zu (unter DOS wird dabei in Adresse 0x00000004 geschrieben).",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Händler & Schmied (6)",
+      "herkunft": "Crystals-DSA-Foren: Bugliste Schatten über Riva — Schmied / Warenlager"
+    },
+    {
+      "nr": "R010",
+      "titel": "Alle abgegebenen Waffen beim ersten Schmied verschwinden beim Besuch des zweiten Schmieds (Schwert des Artherion!)",
+      "was_war_falsch": "Gibt man bei einem der beiden Schmiede in Riva Waffen zur Reparatur ab (oder lässt dort das legendäre Schwert des Artherion schmieden) und spricht später den anderen Schmied an, sind sämtliche beim ersten Schmied hinterlegten Waffen spurlos und unwiederbringlich verschwunden.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Händler & Schmied (6)",
+      "herkunft": "Crystals-DSA-Foren: Bugliste Schatten über Riva — Schmied verschluckt Waffen / Schwert des Artherion"
+    },
+    {
+      "nr": "R011",
+      "titel": "Fertige Waffen beim Schmied werden nicht ausgehändigt, solange ein früherer Auftrag noch dauert",
+      "was_war_falsch": "Hat man beim selben Schmied mehrere Waffen hintereinander abgegeben und ist ein weiter vorn in der Liste stehender Auftrag noch nicht fertig, händigt der Schmied auch alle dahinter stehenden, längst fertiggestellten Waffen nicht aus.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Händler & Schmied (6)",
+      "herkunft": "Crystals-DSA-Foren: Bugliste Schatten über Riva — Schmied rückt Waffen nicht heraus"
+    },
+    {
+      "nr": "R027",
+      "titel": "Händler verspricht beim Feilschen im Text mehr als 30 % Rabatt und schneidet große Beträge ab",
+      "was_war_falsch": "Gibt man beim Feilschen mit sehr hohem Feilschen-Talentwert z. B. 45 % Rabatt ein und besteht die Probe, stimmt der Händler im Dialogtext begeistert den „45 Prozent“ zu, zieht vom Kaufpreis aber nur die intern erlaubten 30 % ab; bei sehr großen Einkaufssummen läuft außerdem die 16-Bit-Rabattberechnung über.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Händler & Schmied (6)",
+      "herkunft": "Crystals-DSA-Foren: Bugliste Schatten über Riva — Feilschen-Anzeige über 30 %"
+    },
+    {
+      "nr": "R028",
+      "titel": "Erschwernis +1 beim Feilschen trotz 0 % Rabattforderung und Schutz vor negativen Preisen",
+      "was_war_falsch": "Selbst wenn man beim Feilschen im Laden „0 %“ eingibt (also gar keinen Preisnachlass verlangt), wird die Feilschen-Probe um +1 erschwert und der Händler kann bei mehreren Fehlversuchen wütend das Geschäft schließen.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Händler & Schmied (6)",
+      "herkunft": "Crystals-DSA-Foren: Bugliste Schatten über Riva — Feilschen / Preise"
+    },
+    {
+      "nr": "R037",
+      "titel": "Bei vollem Inventar im Laden wird nur der halbe Kaufpreis erstattet",
+      "was_war_falsch": "Kauft man im Laden mehr Gegenstände ein, als in die Rucksäcke der Helden passen, und bricht den Verteilbildschirm ab, erstattet der Händler für die nicht übernommenen Waren nur den halben Wiederverkaufswert statt des gerade bezahlten Einkaufspreises (im Zusammenspiel mit dem Stapel-/Tauschbildschirm ließ sich das Verhalten zudem für Inventar-Tricks ausnutzen).",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": true,
+      "bereich": "Händler & Schmied (6)",
+      "herkunft": "Crystals-DSA-Foren: Laden / Warenverteilung bei vollem Inventar"
+    },
+    {
+      "nr": "R016",
+      "titel": "Speicherzugriffsfehler beim Öffnen der Automap ohne Gruppe auf der aktuellen Karte",
+      "was_war_falsch": "Wird die Automap für eine Karte aufgerufen, auf der sich gerade keine aktive Heldengruppe befindet, liest das Spiel vor dem Anfang des Gruppen-Arrays aus fremdem Speicher.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Oberfläche, Karte & Tagebuch (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R072",
+      "titel": "Kalender-Überlauf bei Monats- und Jahreswechsel rechnet falsch",
+      "was_war_falsch": "Überschreitet eine Zeitaddition (z. B. längere Reise, Haft oder Wartezeit) das Monatsende (30 Tage) oder das Jahresende (12 Monate), springt das Spieldatum auf falsche Tages- oder Monatswerte.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Oberfläche, Karte & Tagebuch (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R084",
+      "titel": "Tagebucheinträge mit Stichwort-Nummern ab 128 werden nicht gefunden",
+      "was_war_falsch": "Spätere Tagebucheinträge und Gesprächsnotizen, deren interne Stichwort-Kennung zwischen 128 und 255 liegt, können beim Nachschlagen im Tagebuch nicht mehr zugeordnet werden.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Oberfläche, Karte & Tagebuch (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R092",
+      "titel": "Sinnloser Nullzeiger-Aufruf strcat(p2, 0) in der Textformatierung",
+      "was_war_falsch": "Beim Zusammensetzen bestimmter mehrteiliger Ausgabetexte ruft das Spiel strcat mit einem Nullzeiger als Quellstring auf, was je nach Speicherinhalt an Adresse 0 Müllzeichen anhängt oder abstürzt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Oberfläche, Karte & Tagebuch (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R014",
+      "titel": "Fehlende Untergrenzenprüfung für Porträtslots und nicht zurückgesetzte Einmal-Flags im Schloss",
+      "was_war_falsch": "Beim Zurücksetzen des Schlosses (gz_028190) bleiben zwei Einmal-Ereignisflags erhalten, und bei einer Mausposition links des ersten Porträtslots dekrementiert die Rückwärtsschleife über d_1a48f4 ohne Untergrenze > 0.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche, Karte & Tagebuch (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R017",
+      "titel": "Neue Automap-Notiz überschreibt bestehende Notiz, wenn alle Nachbarfelder voll sind",
+      "was_war_falsch": "Setzt man auf der Automap einen Notizpunkt an eine Stelle, deren 3×3 Nachbarfelder bereits alle mit Markierungen belegt sind, überschreibt das Spiel stillschweigend eine der bestehenden Notizen.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche, Karte & Tagebuch (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R040",
+      "titel": "Absturz bei Geschossen auf kürzeste Distanz und Überlauf bei mehr als 20 Kampfeinheiten",
+      "was_war_falsch": "Feuert eine Kampfeinheit im Rundenkampf ein Geschoss oder einen Zauber auf ein unmittelbar benachbartes Feld ab oder werden durch Beschwörungen mehr als 20 Einheiten gleichzeitig erzeugt, kann das Spiel abstürzen oder Speicher überschreiben.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Kampf (3)",
+      "herkunft": ""
+    },
+    {
+      "nr": "R030",
+      "titel": "Spiegelbilder im Magierturm haben einen ungedeckelten Attackewert (2 × Heldenstufe)",
+      "was_war_falsch": "Betritt eine hochstufige Heldengruppe (ab Stufe 10) den Spiegelkampf im Magierturm, treffen die gegnerischen Spiegelbilder mit einem Attackewert von 20 oder mehr (statt maximal 18 nach DSA-Regel) fast jeden Schlag automatisch.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (3)",
+      "herkunft": "Crystals-DSA-Foren: Spiegelkampf im Magierturm"
+    },
+    {
+      "nr": "R039",
+      "titel": "Zweifeldgroße Gegner prüfen bei der Wegsuche am Kampffeldrand außerhalb des 24×24-Bretts",
+      "was_war_falsch": "Bewegt sich im Rundenkampf eine zweifeldgroße Kreatur (z. B. ein großes Monster oder Tier) direkt am Rand des 24×24-Kampffelds, liest die Wegsuche für das zweite Körperfeld außerhalb des Spielfeld-Arrays.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (3)",
+      "herkunft": ""
+    }
+  ],
+  "zusatzfunktionen": [
+    {
+      "titel": "Live-Probenlog (Talent-, Zauber-, Eigenschafts- und Kampfproben)",
+      "version": "v1.0",
+      "stufe": "ab Wichtige (Haken „Probenlog“)",
+      "text": "Schreibt im Hintergrund jede Eigenschafts-, Talent-, Zauber- und Kampfprobe (Attacke, Parade, Fernkampf) in PROBEN.CSV und zeigt sie live im Begleitfenster neben dem Spiel an, ohne die Zufallsfolge oder das Spielstandsformat (.GAM) zu verändern."
+    },
+    {
+      "titel": "Klassische Spielervorteile optional behalten (--exploits-lassen)",
+      "version": "v1.0",
+      "stufe": "Optional beim Selbstbauen",
+      "text": "Unter den 52 Korrekturen befinden sich 5 Fehler, die im Originalspiel von 1997 einen Vorteil für den Spieler darstellten (R025 Alchemie-Braudauer, R037 Laden-Rückerstattung, R041/R042/R043 Zaubern ohne ausreichende AE). Wer alle Absturz- und Logik-Fixes nutzen, aber diese 5 Tricks behalten möchte, kann mit --exploits-lassen bauen."
+    }
+  ]
+}

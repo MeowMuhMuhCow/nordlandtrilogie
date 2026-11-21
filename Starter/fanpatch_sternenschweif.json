@@ -1,0 +1,3246 @@
+{
+  "spiel_id": "sternenschweif",
+  "spiel_name": "Sternenschweif",
+  "aktuelle_version": "v1.3",
+  "github_url": "https://github.com/MeowMuhMuhCow/sternenschweif/blob/main/BUGFIXES.md",
+  "versionen": [
+    {
+      "version": "v1.3",
+      "datum": "05.11.2026",
+      "titel": "Probenlog zeigt den Stufenanstieg",
+      "text": "Auf Wunsch von Andrean im Crystals-Forum: Das Probenlog zeigt jetzt auch alle Würfe beim Stufenanstieg. Die Würfe selbst laufen genau wie bisher, mit denselben Zufallszahlen in derselben Reihenfolge. Spielstände bleiben kompatibel, die Standard-EXE bleibt bytegleich.\n- Talente und Zauber: jeder Steigerungsversuch mit altem Wert, Wurf und Ergebnis, auch beim automatischen Steigern. Gut zu sehen: Das Spiel würfelt dafür eine gleichverteilte Zahl von 2 bis 12 (ab Wert 11: 3 bis 18), nicht 2W6 bzw. 3W6\n- Eigenschaften: die gesteigerte positive Eigenschaft und beim Senken der negativen Eigenschaft alle drei W20\n- LE und AE: der LE-Wurf (bei Zauberkundigen W6 + 2 Punkte für LE und AE) und beim Magier der Tausch von 10 Zaubersteigerungen gegen AE\n- Probenlog-Fenster, Linux-Anzeige und HTML-Seite kennen die neuen Zeilen, die HTML-Seite hat dafür den Filter „Stufenanstieg“",
+      "korrekturen": []
+    },
+    {
+      "version": "v1.2.1",
+      "datum": "01.11.2026",
+      "titel": "Startdateien repariert",
+      "text": "Keine Änderung am Spiel, die EXEs sind dieselben wie in 1.2. Die Windows-Startdateien schließen beim Kopieren des Spielordners jetzt den Bugfix-Ordner selbst aus. Lag das Paket im Spielordner, kopierte es sich sonst immer tiefer in sich hinein, und DOSBox startete nicht (gemeldet von Andrean im Crystals-Forum für die Schicksalsklinge). Unter Linux ist dasselbe für einen Clone im Spielordner abgesichert.",
+      "korrekturen": []
+    },
+    {
+      "version": "v1.2",
+      "datum": "31.10.2026",
+      "titel": "Probenlog",
+      "text": "Wie in der Schicksalsklinge 1.3, auf vielfachen Wunsch aus dem Crystals-DSA-Forum: Jetzt sieht man, was das Spiel würfelt. Jede Probe erscheint live in einem zweiten Fenster neben dem Spiel und wird mitgeschrieben, auch die versteckten Proben, die man sonst nie mitbekommt. Gestartet wird das mit SCHWEIF_FIX_WICHTIG_MIT_PROBENLOG_STARTEN.bat (Linux: bash Linux/starten.sh wichtig log). Ohne diese Startdatei läuft alles wie bisher. Beschreibung: Probenlog/LIESMICH.md. Keine neuen Fehlerbehebungen.\n- Eigenschaftsproben (MU, KL, KK …) mit Wert, Zuschlag, W20 und Ergebnis\n- Talent- und Zauberproben mit Talent bzw. Zauber, Talentwert, Zuschlag, den drei Eigenschaften und jedem der drei W20, dazu die Restpunkte\n- Fernkampf und jede Attacke und Parade im Kampf, von Helden und Gegnern\n- Probenlog/Probenlog_Sternenschweif.html zeigt eine Sitzung hinterher als Tabelle mit Erfolgsquote je Held, Talent und Zauber (in Chrome/Edge auch live)\n- Windows: Die Startdateien kopieren den Spielordner jetzt in den Spielstand-Ordner und nehmen diesen als Laufwerk C:. Die DOSBox von GOG kann kein Overlay-Laufwerk, dadurch landeten bisher Spielstände im Spielordner statt im Spielstand-Ordner\n- Linux: Ablageordner für Spielstände (ABLAGE=), Overlay mit DOSBox Staging, Vollbild, Tempo und dauerhafte Einstellungen in Linux/starten.conf, siehe Linux/LIESMICH.md\n- Die Proben laufen exakt gleich ab (gleich viele Würfe in derselben Reihenfolge), das Spielstandformat ist unverändert. Im Spiel noch ungetestet",
+      "korrekturen": []
+    },
+    {
+      "version": "v1.1.1",
+      "datum": "31.10.2026",
+      "titel": "Unterstützung für Linux (patchen.sh, starten.sh)",
+      "text": "Keine neuen Fehlerbehebungen, die Bugfix-EXEs sind Byte für Byte dieselben wie in Version 1.1. Neu ist die Unterstützung für Linux:\n- Linux-Skripte im Ordner Linux/: patchen.sh erzeugt die Bugfix-Fassungen aus der eigenen GOG-Fassung (gleiche Prüfsummen wie unter Windows), starten.sh wichtig|alles startet sie in DOSBox. Dazu Patch/patchen.py als Gegenstück zu patchen.ps1\n- Das Bright-Eyes-Repository von Henne direkt verlinkt",
+      "korrekturen": []
+    },
+    {
+      "version": "v1.1",
+      "datum": "30.10.2026",
+      "titel": "Zauber laut Lösungsbuch: Visibili für die ganze Gruppe und Gardianum",
+      "text": "Abgleich mit der Zauberliste im Lösungsbuch zur Schicksalsklinge. Zauber, die dort beschrieben sind, im Spiel aber nichts oder zu wenig tun:\n- Visibili macht die ganze Gruppe unsichtbar, wie das Lösungsbuch zur Schicksalsklinge den Zauber beschreibt. Sind alle Helden unsichtbar, fällt der Kampf aus. Bisher wurde nur der Zaubernde unsichtbar, und in einer Gruppe gab es trotzdem jeden Kampf (Wunsch aus dem Crystals-Forum) – Nr. 377 (WICHTIG)\n- Gardianum schützt jetzt. Der Schild (Stufe + eingesetzte AE) fängt feindliche Fulminictus und Ignifaxius ab, bis er verbraucht ist. Bisher kostete er nur AE – Nr. 378 (WICHTIG)",
+      "korrekturen": [
+        {
+          "nr": "377",
+          "art": "neu"
+        },
+        {
+          "nr": "378",
+          "art": "neu"
+        }
+      ]
+    },
+    {
+      "version": "v1.0",
+      "datum": "29.10.2026",
+      "titel": "Erste Veröffentlichung der Bugfix-Fassung (225 behobene Fehler)",
+      "text": "- Orks im Gefängnis werfen die abgenommene Ausrüstung nicht mehr weg, sie liegt danach in den Truhen – Nr. 212\n- Lagerhaus: der Warenwert verdoppelt sich nicht mehr bei jedem Einlagern, die Lagerkosten explodieren nicht – Nr. 352\n- Laden und fahrender Händler: man zahlt nur noch für die Ware, die man auch bekommt (auch Nr. 20) – Nr. 84\n- Kräuterwirkungen verfallen wieder ordentlich, die Werte kippen nicht mehr – Nr. 369\n- Der Kampf gegen Horriphobus endet wieder – Nr. 364\n- Schlüsselbund: kein Absturz mehr ab 18 Schlüsseln, kein verschwundener Schlüssel beim Abnehmen (auch Nr. 362) – Nr. 14\n- Eine leere Gruppe hängt das Spiel nicht mehr auf – Nr. 363\n- Herberge: eine abgebrochene Umbuchung behält das alte Zimmer – Nr. 155 ✅ im Spiel getestet\n- Kein Sprung auf 42,9 Millionen Dukaten mehr, wenn das Geld unter null fällt (Exploit) – Nr. 25",
+      "korrekturen": [
+        {
+          "nr": "1",
+          "art": "neu"
+        },
+        {
+          "nr": "2",
+          "art": "neu"
+        },
+        {
+          "nr": "4",
+          "art": "neu"
+        },
+        {
+          "nr": "5",
+          "art": "neu"
+        },
+        {
+          "nr": "6",
+          "art": "neu"
+        },
+        {
+          "nr": "8",
+          "art": "neu"
+        },
+        {
+          "nr": "12",
+          "art": "neu"
+        },
+        {
+          "nr": "13",
+          "art": "neu"
+        },
+        {
+          "nr": "14",
+          "art": "neu"
+        },
+        {
+          "nr": "18",
+          "art": "neu"
+        },
+        {
+          "nr": "20",
+          "art": "neu"
+        },
+        {
+          "nr": "25",
+          "art": "neu"
+        },
+        {
+          "nr": "32",
+          "art": "neu"
+        },
+        {
+          "nr": "37",
+          "art": "neu"
+        },
+        {
+          "nr": "39",
+          "art": "neu"
+        },
+        {
+          "nr": "43",
+          "art": "neu"
+        },
+        {
+          "nr": "45",
+          "art": "neu"
+        },
+        {
+          "nr": "51",
+          "art": "neu"
+        },
+        {
+          "nr": "59",
+          "art": "neu"
+        },
+        {
+          "nr": "63",
+          "art": "neu"
+        },
+        {
+          "nr": "71",
+          "art": "neu"
+        },
+        {
+          "nr": "72",
+          "art": "neu"
+        },
+        {
+          "nr": "77",
+          "art": "neu"
+        },
+        {
+          "nr": "78",
+          "art": "neu"
+        },
+        {
+          "nr": "79",
+          "art": "neu"
+        },
+        {
+          "nr": "84",
+          "art": "neu"
+        },
+        {
+          "nr": "93",
+          "art": "neu"
+        },
+        {
+          "nr": "94",
+          "art": "neu"
+        },
+        {
+          "nr": "98",
+          "art": "neu"
+        },
+        {
+          "nr": "102",
+          "art": "neu"
+        },
+        {
+          "nr": "106",
+          "art": "neu"
+        },
+        {
+          "nr": "109",
+          "art": "neu"
+        },
+        {
+          "nr": "110",
+          "art": "neu"
+        },
+        {
+          "nr": "111",
+          "art": "neu"
+        },
+        {
+          "nr": "114",
+          "art": "neu"
+        },
+        {
+          "nr": "118",
+          "art": "neu"
+        },
+        {
+          "nr": "119",
+          "art": "neu"
+        },
+        {
+          "nr": "120",
+          "art": "neu"
+        },
+        {
+          "nr": "121",
+          "art": "neu"
+        },
+        {
+          "nr": "122",
+          "art": "neu"
+        },
+        {
+          "nr": "123",
+          "art": "neu"
+        },
+        {
+          "nr": "124",
+          "art": "neu"
+        },
+        {
+          "nr": "126",
+          "art": "neu"
+        },
+        {
+          "nr": "127",
+          "art": "neu"
+        },
+        {
+          "nr": "128",
+          "art": "neu"
+        },
+        {
+          "nr": "129",
+          "art": "neu"
+        },
+        {
+          "nr": "130",
+          "art": "neu"
+        },
+        {
+          "nr": "134",
+          "art": "neu"
+        },
+        {
+          "nr": "135",
+          "art": "neu"
+        },
+        {
+          "nr": "138",
+          "art": "neu"
+        },
+        {
+          "nr": "140",
+          "art": "neu"
+        },
+        {
+          "nr": "143",
+          "art": "neu"
+        },
+        {
+          "nr": "144",
+          "art": "neu"
+        },
+        {
+          "nr": "145",
+          "art": "neu"
+        },
+        {
+          "nr": "146",
+          "art": "neu"
+        },
+        {
+          "nr": "149",
+          "art": "neu"
+        },
+        {
+          "nr": "151",
+          "art": "neu"
+        },
+        {
+          "nr": "153",
+          "art": "neu"
+        },
+        {
+          "nr": "154",
+          "art": "neu"
+        },
+        {
+          "nr": "155",
+          "art": "neu"
+        },
+        {
+          "nr": "157",
+          "art": "neu"
+        },
+        {
+          "nr": "159",
+          "art": "neu"
+        },
+        {
+          "nr": "160",
+          "art": "neu"
+        },
+        {
+          "nr": "161",
+          "art": "neu"
+        },
+        {
+          "nr": "165",
+          "art": "neu"
+        },
+        {
+          "nr": "166",
+          "art": "neu"
+        },
+        {
+          "nr": "170",
+          "art": "neu"
+        },
+        {
+          "nr": "173",
+          "art": "neu"
+        },
+        {
+          "nr": "174",
+          "art": "neu"
+        },
+        {
+          "nr": "179",
+          "art": "neu"
+        },
+        {
+          "nr": "180",
+          "art": "neu"
+        },
+        {
+          "nr": "182",
+          "art": "neu"
+        },
+        {
+          "nr": "183",
+          "art": "neu"
+        },
+        {
+          "nr": "185",
+          "art": "neu"
+        },
+        {
+          "nr": "186",
+          "art": "neu"
+        },
+        {
+          "nr": "187",
+          "art": "neu"
+        },
+        {
+          "nr": "188",
+          "art": "neu"
+        },
+        {
+          "nr": "191",
+          "art": "neu"
+        },
+        {
+          "nr": "192",
+          "art": "neu"
+        },
+        {
+          "nr": "193",
+          "art": "neu"
+        },
+        {
+          "nr": "194",
+          "art": "neu"
+        },
+        {
+          "nr": "196",
+          "art": "neu"
+        },
+        {
+          "nr": "197",
+          "art": "neu"
+        },
+        {
+          "nr": "199",
+          "art": "neu"
+        },
+        {
+          "nr": "203",
+          "art": "neu"
+        },
+        {
+          "nr": "204",
+          "art": "neu"
+        },
+        {
+          "nr": "206",
+          "art": "neu"
+        },
+        {
+          "nr": "207",
+          "art": "neu"
+        },
+        {
+          "nr": "208",
+          "art": "neu"
+        },
+        {
+          "nr": "212",
+          "art": "neu"
+        },
+        {
+          "nr": "213",
+          "art": "neu"
+        },
+        {
+          "nr": "214",
+          "art": "neu"
+        },
+        {
+          "nr": "215",
+          "art": "neu"
+        },
+        {
+          "nr": "216",
+          "art": "neu"
+        },
+        {
+          "nr": "220",
+          "art": "neu"
+        },
+        {
+          "nr": "352",
+          "art": "neu"
+        },
+        {
+          "nr": "353",
+          "art": "neu"
+        },
+        {
+          "nr": "354",
+          "art": "neu"
+        },
+        {
+          "nr": "356",
+          "art": "neu"
+        },
+        {
+          "nr": "357",
+          "art": "neu"
+        },
+        {
+          "nr": "361",
+          "art": "neu"
+        },
+        {
+          "nr": "362",
+          "art": "neu"
+        },
+        {
+          "nr": "363",
+          "art": "neu"
+        },
+        {
+          "nr": "364",
+          "art": "neu"
+        },
+        {
+          "nr": "368",
+          "art": "neu"
+        },
+        {
+          "nr": "369",
+          "art": "neu"
+        },
+        {
+          "nr": "370",
+          "art": "neu"
+        },
+        {
+          "nr": "374",
+          "art": "neu"
+        },
+        {
+          "nr": "375",
+          "art": "neu"
+        },
+        {
+          "nr": "7",
+          "art": "neu"
+        },
+        {
+          "nr": "9",
+          "art": "neu"
+        },
+        {
+          "nr": "10",
+          "art": "neu"
+        },
+        {
+          "nr": "11",
+          "art": "neu"
+        },
+        {
+          "nr": "15",
+          "art": "neu"
+        },
+        {
+          "nr": "16",
+          "art": "neu"
+        },
+        {
+          "nr": "17",
+          "art": "neu"
+        },
+        {
+          "nr": "21",
+          "art": "neu"
+        },
+        {
+          "nr": "22",
+          "art": "neu"
+        },
+        {
+          "nr": "24",
+          "art": "neu"
+        },
+        {
+          "nr": "26",
+          "art": "neu"
+        },
+        {
+          "nr": "27",
+          "art": "neu"
+        },
+        {
+          "nr": "29",
+          "art": "neu"
+        },
+        {
+          "nr": "31",
+          "art": "neu"
+        },
+        {
+          "nr": "33",
+          "art": "neu"
+        },
+        {
+          "nr": "34",
+          "art": "neu"
+        },
+        {
+          "nr": "36",
+          "art": "neu"
+        },
+        {
+          "nr": "38",
+          "art": "neu"
+        },
+        {
+          "nr": "41",
+          "art": "neu"
+        },
+        {
+          "nr": "42",
+          "art": "neu"
+        },
+        {
+          "nr": "44",
+          "art": "neu"
+        },
+        {
+          "nr": "46",
+          "art": "neu"
+        },
+        {
+          "nr": "47",
+          "art": "neu"
+        },
+        {
+          "nr": "48",
+          "art": "neu"
+        },
+        {
+          "nr": "49",
+          "art": "neu"
+        },
+        {
+          "nr": "50",
+          "art": "neu"
+        },
+        {
+          "nr": "52",
+          "art": "neu"
+        },
+        {
+          "nr": "53",
+          "art": "neu"
+        },
+        {
+          "nr": "54",
+          "art": "neu"
+        },
+        {
+          "nr": "55",
+          "art": "neu"
+        },
+        {
+          "nr": "56",
+          "art": "neu"
+        },
+        {
+          "nr": "57",
+          "art": "neu"
+        },
+        {
+          "nr": "58",
+          "art": "neu"
+        },
+        {
+          "nr": "60",
+          "art": "neu"
+        },
+        {
+          "nr": "61",
+          "art": "neu"
+        },
+        {
+          "nr": "62",
+          "art": "neu"
+        },
+        {
+          "nr": "65",
+          "art": "neu"
+        },
+        {
+          "nr": "67",
+          "art": "neu"
+        },
+        {
+          "nr": "68",
+          "art": "neu"
+        },
+        {
+          "nr": "73",
+          "art": "neu"
+        },
+        {
+          "nr": "74",
+          "art": "neu"
+        },
+        {
+          "nr": "75",
+          "art": "neu"
+        },
+        {
+          "nr": "76",
+          "art": "neu"
+        },
+        {
+          "nr": "80",
+          "art": "neu"
+        },
+        {
+          "nr": "81",
+          "art": "neu"
+        },
+        {
+          "nr": "82",
+          "art": "neu"
+        },
+        {
+          "nr": "83",
+          "art": "neu"
+        },
+        {
+          "nr": "85",
+          "art": "neu"
+        },
+        {
+          "nr": "86",
+          "art": "neu"
+        },
+        {
+          "nr": "87",
+          "art": "neu"
+        },
+        {
+          "nr": "88",
+          "art": "neu"
+        },
+        {
+          "nr": "89",
+          "art": "neu"
+        },
+        {
+          "nr": "90",
+          "art": "neu"
+        },
+        {
+          "nr": "91",
+          "art": "neu"
+        },
+        {
+          "nr": "92",
+          "art": "neu"
+        },
+        {
+          "nr": "95",
+          "art": "neu"
+        },
+        {
+          "nr": "97",
+          "art": "neu"
+        },
+        {
+          "nr": "99",
+          "art": "neu"
+        },
+        {
+          "nr": "101",
+          "art": "neu"
+        },
+        {
+          "nr": "103",
+          "art": "neu"
+        },
+        {
+          "nr": "104",
+          "art": "neu"
+        },
+        {
+          "nr": "105",
+          "art": "neu"
+        },
+        {
+          "nr": "107",
+          "art": "neu"
+        },
+        {
+          "nr": "108",
+          "art": "neu"
+        },
+        {
+          "nr": "112",
+          "art": "neu"
+        },
+        {
+          "nr": "115",
+          "art": "neu"
+        },
+        {
+          "nr": "116",
+          "art": "neu"
+        },
+        {
+          "nr": "125",
+          "art": "neu"
+        },
+        {
+          "nr": "131",
+          "art": "neu"
+        },
+        {
+          "nr": "132",
+          "art": "neu"
+        },
+        {
+          "nr": "133",
+          "art": "neu"
+        },
+        {
+          "nr": "136",
+          "art": "neu"
+        },
+        {
+          "nr": "139",
+          "art": "neu"
+        },
+        {
+          "nr": "141",
+          "art": "neu"
+        },
+        {
+          "nr": "142",
+          "art": "neu"
+        },
+        {
+          "nr": "147",
+          "art": "neu"
+        },
+        {
+          "nr": "148",
+          "art": "neu"
+        },
+        {
+          "nr": "150",
+          "art": "neu"
+        },
+        {
+          "nr": "152",
+          "art": "neu"
+        },
+        {
+          "nr": "158",
+          "art": "neu"
+        },
+        {
+          "nr": "162",
+          "art": "neu"
+        },
+        {
+          "nr": "163",
+          "art": "neu"
+        },
+        {
+          "nr": "164",
+          "art": "neu"
+        },
+        {
+          "nr": "167",
+          "art": "neu"
+        },
+        {
+          "nr": "168",
+          "art": "neu"
+        },
+        {
+          "nr": "169",
+          "art": "neu"
+        },
+        {
+          "nr": "171",
+          "art": "neu"
+        },
+        {
+          "nr": "172",
+          "art": "neu"
+        },
+        {
+          "nr": "176",
+          "art": "neu"
+        },
+        {
+          "nr": "178",
+          "art": "neu"
+        },
+        {
+          "nr": "181",
+          "art": "neu"
+        },
+        {
+          "nr": "184",
+          "art": "neu"
+        },
+        {
+          "nr": "189",
+          "art": "neu"
+        },
+        {
+          "nr": "190",
+          "art": "neu"
+        },
+        {
+          "nr": "195",
+          "art": "neu"
+        },
+        {
+          "nr": "198",
+          "art": "neu"
+        },
+        {
+          "nr": "200",
+          "art": "neu"
+        },
+        {
+          "nr": "201",
+          "art": "neu"
+        },
+        {
+          "nr": "202",
+          "art": "neu"
+        },
+        {
+          "nr": "209",
+          "art": "neu"
+        },
+        {
+          "nr": "211",
+          "art": "neu"
+        },
+        {
+          "nr": "218",
+          "art": "neu"
+        },
+        {
+          "nr": "219",
+          "art": "neu"
+        },
+        {
+          "nr": "222",
+          "art": "neu"
+        },
+        {
+          "nr": "224",
+          "art": "neu"
+        },
+        {
+          "nr": "227",
+          "art": "neu"
+        },
+        {
+          "nr": "230",
+          "art": "neu"
+        },
+        {
+          "nr": "231",
+          "art": "neu"
+        },
+        {
+          "nr": "232",
+          "art": "neu"
+        },
+        {
+          "nr": "300",
+          "art": "neu"
+        },
+        {
+          "nr": "301",
+          "art": "neu"
+        },
+        {
+          "nr": "304",
+          "art": "neu"
+        },
+        {
+          "nr": "307",
+          "art": "neu"
+        },
+        {
+          "nr": "351",
+          "art": "neu"
+        },
+        {
+          "nr": "366",
+          "art": "neu"
+        },
+        {
+          "nr": "372",
+          "art": "neu"
+        }
+      ]
+    }
+  ],
+  "korrekturen": [
+    {
+      "nr": "6",
+      "titel": "Orks werfen abgenommene Ausrüstung weg (wie Nr. 212)",
+      "was_war_falsch": "Was die Orks bei der Gefangennahme abnehmen, ist für immer weg, die Truhen mit der Ausrüstung sind leer.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "12",
+      "titel": "Orkgefängnis: bei Alarm zwei Kämpfe hintereinander",
+      "was_war_falsch": "Auf einem Feld im Orkgefängnis folgt nach einem Alarm-Kampf sofort ein zweiter, auch nach Flucht oder Niederlage.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "13",
+      "titel": "Höhlenspinnen kommen bis zur Nestzerstörung wieder",
+      "was_war_falsch": "Die Höhlenspinnen im Orkgefängnis greifen bei jedem Betreten des Feldes erneut an, bis das Nest zerstört ist.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "59",
+      "titel": "NSC verlässt die Gruppe ohne Abschiedstext",
+      "was_war_falsch": "Ist ein NSC im Gewölbe des Namenlosen-Kults unter Tjolmar nicht handlungsfähig, verlässt er die Gruppe kommentarlos.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "102",
+      "titel": "Gewölbe des Namenlosen: Ereignisse zufällig",
+      "was_war_falsch": "Im Gewölbe des Namenlosen-Kults unter Tjolmar werden Zufallsbegegnungen und Kartenereignisse manchmal zufällig ausgelöst oder unterdrückt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "114",
+      "titel": "Lorenfahrt: Abspringen gefahrlos, aber ohne AP",
+      "was_war_falsch": "Beim Abspringen von der Lore in der Binge gibt es nie Schaden, aber auch nie Abenteuerpunkte.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "122",
+      "titel": "Ingerimms Schmiede: Meldung fehlt, „und“ falsch",
+      "was_war_falsch": "In Ingerimms Schmiede fehlt eine Meldung, und Aufzählungen von Heldennamen setzen das „und“ manchmal falsch.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "123",
+      "titel": "Unendlich Geld aus Truhen",
+      "was_war_falsch": "Nimmt man aus einem Geldstapel in einer Truhe nur einen Teil, bekommt man trotzdem den ganzen Stapel gutgeschrieben – immer wieder.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "140",
+      "titel": "Pelzwand: Abzug beim falschen Gegenstand",
+      "was_war_falsch": "An der kalten Pelzwand in der Binge wird beim falschen Gegenstand abgezogen, im schlimmsten Fall an einem Zauberwert des Helden.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "143",
+      "titel": "Zwergenbinge: Portal versetzt andere Teilgruppe",
+      "was_war_falsch": "Bei geteilter Gruppe kann das Portal in der Zwergenbinge eine andere Teilgruppe in eine falsche Zeile oder Wand versetzen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "151",
+      "titel": "Zwergengrab: Frevel ohne Kriegsaxt",
+      "was_war_falsch": "Nimmt man im Zwergengrab der Binge die Kriegsaxt bei vollem Gepäck, zürnt Ingerimm, obwohl man die Axt gar nicht bekommt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "157",
+      "titel": "Orkfestung Ebene 3: ausgewürfelte Gegner fehlen",
+      "was_war_falsch": "Auf zwei Feldern der dritten Ebene der Orkfestung erscheinen ausgewürfelte Zusatzgegner nie, und nach manchen Kämpfen lösen Ereignisse zufällig aus.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "160",
+      "titel": "Zwergenbinge: Gruppe falsch, fremder Gegenstand weg",
+      "was_war_falsch": "Nach der Altarvision in der Zwergenbinge passen aktive Gruppe und Gruppennummer nicht zusammen, und an der morschen Truhe kann ein fremder Gegenstand verloren gehen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "182",
+      "titel": "Orkfestung Ebene 1: Ereignisse zufällig",
+      "was_war_falsch": "Auf der ersten Ebene der Orkfestung werden Folgeereignisse und Zufallsbegegnungen falsch ausgelöst oder unterdrückt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "192",
+      "titel": "Bolzenfalle im Phex-Tempel tötet hintere Helden",
+      "was_war_falsch": "Die Bolzenfalle im Phex-Tempel trifft jeden weiteren Helden härter; ab dem dritten ist sie sicher tödlich.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "194",
+      "titel": "Orkfestung Ebene 3: Schaden bei jedem Betreten",
+      "was_war_falsch": "Auf einem Feld der dritten Ebene der Orkfestung nehmen die Helden bei jedem Betreten Schaden, und Ereignisse lösen teils zufällig aus.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "199",
+      "titel": "Unrathaufen im Orkgefängnis: endlos Gegenstände",
+      "was_war_falsch": "Nach vier Funden im Unrathaufen des Orkgefängnisses bringt jede weitere Suche einen unbestimmten Gegenstand – beliebig oft, mit Absturzgefahr.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "203",
+      "titel": "Flammenschlüssel beliebig oft holbar",
+      "was_war_falsch": "Am aufgetauten Brunnen im Gewölbe unter Tjolmar kann man den Flammenschlüssel immer wieder nehmen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "204",
+      "titel": "Hesinde-Statue: geschwächter Held entgeht der Strafe",
+      "was_war_falsch": "An der Hesinde-Statue im Gewölbe unter Tjolmar bricht ein ausgewählter Held mit weniger als 7 LE nicht zusammen, sondern bekommt die Belohnung.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "212",
+      "titel": "Orkgefängnis: beschlagnahmte Ausrüstung für immer weg",
+      "was_war_falsch": "Alles, was die Orks bei der Gefangennahme abnehmen (Kräuter, Tränke, Magisches, Rüstungen, Waffen), ist verloren – die Truhen damit sind leer.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "354",
+      "titel": "Phexhelm und Phexschild vervielfachen",
+      "was_war_falsch": "Gibt man Phexhelm und Phexschild einem abgetrennten Helden, behält er sie, und der Poltergeist legt trotzdem neue in die Truhe.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "357",
+      "titel": "Asthenilschwert per ESC behalten",
+      "was_war_falsch": "Mit ESC bei der Tauschfrage behält man Salamanderstein und Asthenilschwert, ohne dass es als Frevel gilt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "361",
+      "titel": "Volles Inventar: Asthenilring oder magischer Wasserschlauch weg",
+      "was_war_falsch": "Hat der Held keinen Platz, sind Asthenilring bzw. magischer Wasserschlauch ohne Meldung und für immer verloren.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "368",
+      "titel": "Hesinde-Statue als AP-Quelle",
+      "was_war_falsch": "Lehnt man das Opfer an der Hesinde-Statue ab, bekommt jeder Held trotzdem 20 AP, beliebig oft.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "31",
+      "titel": "Ortswechsel überschreibt den gemerkten alten Ort",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "60",
+      "titel": "Teleport mit unbekannter Herkunft",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "89",
+      "titel": "Kobold Mumpitz: Auswahl liest außerhalb",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "104",
+      "titel": "Altsvellt-Sumpf: alte Ebene überschrieben",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "105",
+      "titel": "Spinnennetze: Schreiben nach Adresse 0",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "115",
+      "titel": "Lore: Lesen vor der Gültigkeitsprüfung",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "133",
+      "titel": "Binge: Position doppelt gesetzt",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "164",
+      "titel": "Ingerimms Schmiede: Schreiben hinter das Feld",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "218",
+      "titel": "Unratfund heißt immer „einen Dolch“",
+      "was_war_falsch": "Im Unrathaufen des Orkgefängnisses heißt jeder Fund „einen Dolch“, obwohl man auch Schmuck, einen goldenen Schlüssel oder eine Bronzeflasche erhält.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "366",
+      "titel": "Tierkunde an den Spinnennetzen invertiert",
+      "was_war_falsch": "Vor den Höhlenspinnen wird gewarnt, wenn jemand die Tierkunde-Probe verpatzt, und nicht, wenn sie gelingt.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dungeons (34)",
+      "herkunft": ""
+    },
+    {
+      "nr": "5",
+      "titel": "Wegereignisse lösen an zufälligen Stellen aus",
+      "was_war_falsch": "Manche Wegereignisse treten unterwegs an unerwarteten Stellen oder zusätzlich auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "8",
+      "titel": "Zufallsbegegnungen in einer Geländeart falsch",
+      "was_war_falsch": "In einer Geländeart fällt jede sechste Zufallsbegegnung aus, und eine Gegnerart kommt öfter als gedacht.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "37",
+      "titel": "Absturz-Tagebucheintrag auch ohne Absturz",
+      "was_war_falsch": "Auf einem Weg steht bei jeder Durchreise im Tagebuch, ein Held sei knapp einem Absturz entgangen – oft mit Unsinnsnamen, auch wenn nichts passiert ist.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "43",
+      "titel": "Steinbock frisst die letzte Süßigkeit umsonst",
+      "was_war_falsch": "Bietet man dem Steinbock die letzte Lakritze oder das letzte Bonbon an, ist es weg, aber er nimmt das Angebot nicht an.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "45",
+      "titel": "Kräuterstelle an Weg 165 beliebig oft ernten",
+      "was_war_falsch": "An einer Kräuterstelle nahe Lowangen findet man bei jeder Durchreise erneut Wirselkraut, Einbeeren und eine Alraune, ohne dass es schwerer wird.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "63",
+      "titel": "Wirselkraut an Weg 201 beliebig oft ernten",
+      "was_war_falsch": "An einer Kräuterstelle findet man bei jeder Durchreise wieder Wirselkraut, die Probe wird nie schwerer.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "77",
+      "titel": "Vorratslager: Debugtext als Mengenfrage",
+      "was_war_falsch": "Im Vorratslager erscheint bei zwei Funden statt der Mengenfrage ein Text wie „k=3, i=2“.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "93",
+      "titel": "Absturz beim Bauern mit dem gebrochenen Rad",
+      "was_war_falsch": "Hilft man dem Bauern mit dem gebrochenen Rad, kann das Spiel abstürzen oder Unsinnsnamen zeigen, und der Text nennt nur drei Helden.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "118",
+      "titel": "Wasserfall-Spende: Vollheilung fast umsonst",
+      "was_war_falsch": "Die Spende am Wasserfall kostet statt der Hälfte des Geldes höchstens 63 Heller, manchmal bringt sie sogar Geld – und die Gruppe wird voll geheilt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "119",
+      "titel": "Warzennashorn-Schaden und Kräuterprobe Weg 36 falsch",
+      "was_war_falsch": "Das Warzennashorn richtet manchmal weniger als den vorgesehenen Mindestschaden an; an der Kräuterstelle bei Tjolmar ändert sich für die meisten Gruppen nichts Spürbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "121",
+      "titel": "Sehr lange Reiseetappen dauern zu kurz",
+      "was_war_falsch": "Sehr lange Etappen auf der Reisekarte können viel zu schnell vorbei sein.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "124",
+      "titel": "Reisetempo im Randfall falsch",
+      "was_war_falsch": "In Randfällen stimmt das Reisetempo nicht, oder die Zahl der Wegpunkte wird nicht aktualisiert.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "134",
+      "titel": "Schwarzmagier-Szene: Abschlusstext und Ton fehlen",
+      "was_war_falsch": "In einem Zweig der Schwarzmagier-Szene fehlen Abschlusstext und Klang.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "146",
+      "titel": "Spendenschrein: falscher Text, Zufallswert",
+      "was_war_falsch": "Am Spendenschrein erscheint ein Text im falschen Moment, und Folgeereignisse fallen teils zufällig aus.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "153",
+      "titel": "Reise bricht unvermittelt ab",
+      "was_war_falsch": "Eine Reise wird gelegentlich ohne Grund unterbrochen, als hätte man Rast befohlen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "170",
+      "titel": "Routenplanung ergibt falsche Route",
+      "was_war_falsch": "Die geplante Route auf der Reisekarte ist in manchen Fällen falsch.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "180",
+      "titel": "Sieg über die Schwarzmagier wird nicht gemerkt",
+      "was_war_falsch": "Besiegt man die Schwarzmagier an der zweiten Stelle, wird das Gesprächsthema „Reisende“ nie freigeschaltet.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "191",
+      "titel": "Lager: Wachen und Diebstahl fehlerhaft",
+      "was_war_falsch": "Beim Rasten im Lager gilt eine erfolgreiche Wache für alle folgenden, und ein Dieb überspringt Gegenstände.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "193",
+      "titel": "Lager: Entscheidung zufällig",
+      "was_war_falsch": "Manche Entscheidungen im Lager fallen zufällig aus.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "196",
+      "titel": "Treffen mit Teilgruppen unterwegs unzuverlässig",
+      "was_war_falsch": "Treffen geteilte Gruppen unterwegs aufeinander, wird das nicht zuverlässig erkannt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "353",
+      "titel": "Holzfällerlager: Abbrechen legt ein Stück dazu",
+      "was_war_falsch": "Bricht man die Mengenabfrage im verlassenen Holzfällerlager ab, liegt danach ein Gegenstand mehr dort.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "370",
+      "titel": "Kräutersuche über „Alte Einstellungen“ ohne Malus",
+      "was_war_falsch": "Lässt man über „Alte Einstellungen“ Kräuter suchen, erholt sich der Sammler voll.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "101",
+      "titel": "Kräuterstelle an Weg 41: Zähler ohne Grenze",
+      "was_war_falsch": "Der Wirselkraut-Fund an einem Weg bei Finsterkoppen wird mit jeder Durchreise schwerer, nach sehr vielen Durchreisen schwankt die Schwierigkeit.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "112",
+      "titel": "Kriegerhüne: Wegetexte unnötig neu geladen",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "142",
+      "titel": "Lagerplatz: Suche liest hinter der Tabelle",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "150",
+      "titel": "Fähre: Zufallswert an unbekanntem Ort",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "222",
+      "titel": "Steinschlag: danach evtl. falsche Wegtexte",
+      "was_war_falsch": "Nach dem Freigraben eines Steinschlags können weitere Ereignisse auf demselben Wegstück falsche Texte zeigen.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Reise & Ereignisse (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "127",
+      "titel": "Klangeinstellung: Port/IRQ-Eingabe verworfen",
+      "was_war_falsch": "In der Klangeinstellung wird bei manchen Sound-Blaster-Treibern der eingegebene Port bzw. IRQ nicht übernommen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "9",
+      "titel": "Bild-Entpacker liefert Zufallswert zurück",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "16",
+      "titel": "Einzelne Pixel in falscher Farbe",
+      "was_war_falsch": "Vereinzelt erscheinen Bildpunkte in einer leicht falschen Farbe.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "50",
+      "titel": "Phex-Tempel: nur eine von vier Flächen animiert",
+      "was_war_falsch": "Im Phex-Tempel bewegt sich von vier animierten Wandflächen nur eine.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "68",
+      "titel": "Klangtreiber: kleines Speicherleck",
+      "was_war_falsch": "Nichts Sichtbares; beim Neuanlegen der Klänge geht etwas Speicher verloren.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "73",
+      "titel": "Kampfanimation: über 40 Animationen gleichzeitig",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "74",
+      "titel": "Bildklasse: Randfehler ohne Aufrufweg",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "87",
+      "titel": "Gegenstände scheinen durch Wände",
+      "was_war_falsch": "In der 3D-Ansicht sieht man in drei von vier Blickrichtungen manchmal Objekte durch Wände.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "92",
+      "titel": "Hintergrundanimation zeigt evtl. falsches Teilbild",
+      "was_war_falsch": "Höchstens ein falsches Einzelbild in einer Hintergrundanimation.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "125",
+      "titel": "Zwischensequenz: Überblendung zufällig",
+      "was_war_falsch": "In einer Zwischensequenz ist die Überblendung mal schneller, mal langsamer.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "132",
+      "titel": "Ortsszene: Musikwahl zufällig",
+      "was_war_falsch": "In einer Ortsszene kann die falsche Musik laufen.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "139",
+      "titel": "Kellertür: Wandbild bei nicht quadratischer Karte",
+      "was_war_falsch": "Nur auf nicht quadratischen Karten erscheint ein Türbild im Keller versetzt.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "141",
+      "titel": "Animation: hängender Zeiger bei fehlender Datei",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "167",
+      "titel": "Sonderkampf-Sequenzen: doppeltes Freigeben",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "172",
+      "titel": "Intro: Speicher-Merker nicht gesetzt",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "176",
+      "titel": "Reisekarte: Grafikfehler beim Hochscrollen",
+      "was_war_falsch": "Beim Hochscrollen der Reisekarte entstehen Grafikfehler.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "181",
+      "titel": "Kampf: einige Klänge fehlen",
+      "was_war_falsch": "Bei einigen Kampfereignissen fehlen die Klänge.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "189",
+      "titel": "Sonderkampf-Animation läuft falsch",
+      "was_war_falsch": "Eine Animation im Sonderkampf zeigt ein falsches Feld.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "190",
+      "titel": "Abspann: eine Zeile fehlt mit Sprachausgabe",
+      "was_war_falsch": "Mit Sprachausgabe fehlt im Abspann eine Zeile.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "195",
+      "titel": "Abblenden: Palette nur teilweise gelöscht",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "198",
+      "titel": "Ohne EMS: falsche Pixel im Bildschirmrahmen",
+      "was_war_falsch": "Ohne EMS-Speicher erscheinen nach dem Auslagern einige falsche Pixel unten links im Bildschirmrahmen.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "202",
+      "titel": "3D-Objekte: eine Palettenfarbe zu viel",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "211",
+      "titel": "Bild laden mit zu kleinem Puffer (ungenutzt)",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "224",
+      "titel": "Kampffiguren am Rand ungleich abgeschnitten",
+      "was_war_falsch": "Kampffiguren am Bildrand werden ungleichmäßig abgeschnitten.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "300",
+      "titel": "DIGPAK-Klangtreiber: Stapelfehler (ungenutzt)",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "301",
+      "titel": "Zeichenart „Oder“ kopiert falsch (ungenutzt)",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "351",
+      "titel": "Tiefensortierung bei 129 Flächen",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Klang & Grafik (27)",
+      "herkunft": ""
+    },
+    {
+      "nr": "109",
+      "titel": "Texteingabefeld: Grafikfehler und Zeichenmüll",
+      "was_war_falsch": "In Texteingabefeldern (z. B. Notizen) gibt es Grafikfehler, und Enter am Zeilenanfang kann ein Zeichen der Vorzeile verändern.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "144",
+      "titel": "Tagebuch: Seitenzählung falsch, Überlauf möglich",
+      "was_war_falsch": "Die Seitenzahlen im Tagebuch stimmen nicht immer, und sehr lange Einträge auf vollen Seiten können das Spiel stören.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "208",
+      "titel": "Automap ohne XMS/EMS kaputt, Notizreste",
+      "was_war_falsch": "Ohne XMS- oder EMS-Speicher funktioniert die Automap nicht richtig, und gelöschte Kartennotizen hinterlassen Reste im Spielstand.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "7",
+      "titel": "Karte aufdecken: Grenzprüfung doppelt",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "10",
+      "titel": "Heldenvorauswahl steht manchmal auf leerem Platz",
+      "was_war_falsch": "In manchen Heldenauswahlen steht der Cursor auf einem leeren Platz statt auf dem passenden Helden.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "22",
+      "titel": "Automap findet sehr weite Wege nicht",
+      "was_war_falsch": "Ein Klick auf ein sehr weit entferntes Ziel der Automap ergibt „kein Weg“.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "24",
+      "titel": "Warenauswahl: Pfeil links springt an den Anfang",
+      "was_war_falsch": "In der Warenauswahl springt der Cursor mit Pfeil links aus der ersten Spalte nach oben links.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "27",
+      "titel": "Texteingabe: fehlende Endnull",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "36",
+      "titel": "Reisekarte: Richtungswahl ohne Rückgabewert",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "44",
+      "titel": "Zahleneingabe zeigt falsche erste Ziffer",
+      "was_war_falsch": "In manchen Zahlenfeldern erscheint bei großen Vorgabewerten ein unsinniges Zeichen als erste Ziffer.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "46",
+      "titel": "Reisekarte: Wegsuche liest hinter der Tabelle",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "47",
+      "titel": "Reisekarte: Wegzeichnung im Randfall falsch",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "53",
+      "titel": "Porträtleiste einer Teilgruppe zu breit/schmal",
+      "was_war_falsch": "Bei geteilter Gruppe wird die Porträtleiste einer nicht aktiven Gruppe manchmal in falscher Breite gezeichnet.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "56",
+      "titel": "Tagebuch drucken: Überlauf bei langen Zeilen",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "57",
+      "titel": "Tagebuch-Heldennamen: Lesen hinter dem Feld",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "58",
+      "titel": "Ortssymbole: unvollständige Änderungsprüfung",
+      "was_war_falsch": "Höchstens ein überflüssiges Neuzeichnen der Symbolleiste.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "62",
+      "titel": "Porträt ziehen liest vor der Tabelle",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "65",
+      "titel": "Genitiv-s bei Namen mit Sonderzeichen falsch",
+      "was_war_falsch": "Bei Heldennamen mit Sonderzeichen (außer ä, ö, ü) steht das Genitiv-s falsch oder fehlt.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "80",
+      "titel": "Reisekarte: Position im Randfall falsch",
+      "was_war_falsch": "In einem Randfall wird die Gruppe auf der Reisekarte an einer falschen Stelle gezeigt.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "97",
+      "titel": "Kompassrose verschwindet im Randfall",
+      "was_war_falsch": "In seltenen Fällen ist die Kompassrose nicht zu sehen.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "99",
+      "titel": "Dialogfenster: Randfälle ohne Wirkung",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "103",
+      "titel": "Tagebuchsuche: Esc sucht statt abzubrechen",
+      "was_war_falsch": "Drückt man in der Tagebuchsuche Esc, startet eine Suche, statt abzubrechen.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "108",
+      "titel": "Auswahlliste ohne Grenzprüfung",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "136",
+      "titel": "Fenster springt beim Verschieben",
+      "was_war_falsch": "Beim Ziehen eines Fensters springt es an eine falsche Stelle.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "162",
+      "titel": "Reisekarte: Ortssuche ohne Grenze",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Oberfläche (25)",
+      "herkunft": ""
+    },
+    {
+      "nr": "1",
+      "titel": "Verzauberte Gegner patzen im Angriff ohne Folgen",
+      "was_war_falsch": "Greift ein verzauberter Gegner einen anderen Gegner an und patzt, verletzt er sich nie selbst.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "18",
+      "titel": "Flucht vom Randfeld wird manchmal verweigert",
+      "was_war_falsch": "Steht ein Held schon am Rand des Kampffelds, scheitert die Flucht gelegentlich mit „kein Weg“.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "39",
+      "titel": "Hänger bei völlig zugestelltem Kampffeld",
+      "was_war_falsch": "Bei einem ungewöhnlich vollen Kampffeld kann das Spiel beim Aufstellen einer Figur hängen bleiben.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "79",
+      "titel": "Kampf: Figur läuft selten in Zufallsrichtung",
+      "was_war_falsch": "Selten macht eine Figur im Kampf einen Schritt in eine zufällige Richtung oder bleibt einen Schritt zu früh stehen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "98",
+      "titel": "Schlafender NSC steht wach im Kampf",
+      "was_war_falsch": "Schläft ein NSC bei einem Überfall, steht er bei kleiner Gruppe trotzdem wach im Kampf.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "106",
+      "titel": "Sonderkampf: Flächenangriff trifft niemanden",
+      "was_war_falsch": "In einem Sonderkampf bleibt ein Angriff des Gegners auf alle Helden wirkungslos – der Kampf ist leichter als gedacht.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "111",
+      "titel": "Gegnerischer Heilzauber verletzt Schwerverwundete",
+      "was_war_falsch": "Gegnerische Heiler verletzen ihre schwer verwundeten Verbündeten, statt sie zu heilen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "120",
+      "titel": "Automatischer Kampf: Helden zaubern auf falsches Ziel",
+      "was_war_falsch": "Im automatischen Kampf zaubern Helden manchmal auf ein falsches Ziel oder Feld.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "183",
+      "titel": "Kampffeld: falsche Wände und Blockaden",
+      "was_war_falsch": "Auf manchen Kampffeldern blockieren unsichtbare Hindernisse Wege, oder vorhandene fehlen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "187",
+      "titel": "„Sichern“ im Kampf wirkt erst eine Runde später",
+      "was_war_falsch": "Wählt man im Kampf „Sichern“, bekommt der Held in dieser Runde keinen Paradebonus, er wartet nur.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "213",
+      "titel": "Arax-Gift lähmt Gegner völlig",
+      "was_war_falsch": "Jeder Treffer mit einer Arax-vergifteten Waffe senkt die Bewegungspunkte des Gegners ohne Untergrenze – nach einigen Treffern kann er sich nicht mehr bewegen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "364",
+      "titel": "Horriphobus: Kampf endet nie",
+      "was_war_falsch": "Ist der letzte handlungsfähige Held verängstigt und eingeschlossen, läuft der Kampf ohne Ende weiter.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "29",
+      "titel": "Kampfbewegung: Animationsfolge ohne Längengrenze",
+      "was_war_falsch": "Praktisch nichts; nur ein konstruierter Laufweg könnte die Kampfanimation stören.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "38",
+      "titel": "Kampffeld: Belegt-Prüfung ohne Wirkung",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "41",
+      "titel": "Paradepatzer nennt den falschen Helden",
+      "was_war_falsch": "Patzt ein verzauberter Held bei der Parade gegen einen anderen Helden, nennt der Kampftext den Angreifer.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "42",
+      "titel": "Patzerfolge ohne Schaden geprüft",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "49",
+      "titel": "Sonderkampf: Lesen vor dem Nulltest",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "54",
+      "titel": "Gegnerzauber bei leerer Zauberliste",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "75",
+      "titel": "Meldung „versteckte Gegner“ zählt manchmal falsch",
+      "was_war_falsch": "Selten fehlt ein Gegner in der Meldung über versteckte Gegner.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "76",
+      "titel": "Sumpfrantzendokument gegen Gegner ohne Meldung",
+      "was_war_falsch": "Benutzt man das Sumpfrantzendokument im Kampf gegen einen Gegner, fehlt der Hinweis, dass es nichts nützt.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "90",
+      "titel": "Kampf-Figurenliste: mehrere Randfehler",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "147",
+      "titel": "Heldenaktion mit unbekannter Zielart",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "168",
+      "titel": "Kampfaufbau: leere Prüfung",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "200",
+      "titel": "Automatische Zielwahl bevorzugt eine Seite",
+      "was_war_falsch": "Die automatische Zielwahl im Kampf bevorzugt leicht eine Seite.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Kampf (24)",
+      "herkunft": ""
+    },
+    {
+      "nr": "14",
+      "titel": "Absturz beim Schlüsselbund mit 18 oder mehr Schlüsseln",
+      "was_war_falsch": "Hängen 18 oder mehr verschiedene Schlüssel am Schlüsselbund, stürzt das Spiel beim Benutzen ab.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "25",
+      "titel": "Geld ins Minus: Millionen durch Gruppenteilung",
+      "was_war_falsch": "Muss die Gruppe mehr zahlen, als sie hat, zeigt die Geldanzeige rund 42,9 Millionen Dukaten, und abgespaltene Helden bringen echte Millionen mit.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "130",
+      "titel": "Gulmondblatt: Spieltext durch Heldennamen ersetzt",
+      "was_war_falsch": "Benutzt ein Held ein Gulmondblatt, erscheint eine alte, falsche Meldung, und ein Spieltext wird durch seinen Namen überschrieben.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "185",
+      "titel": "Gegenstände weitergeben: falscher Held geprüft",
+      "was_war_falsch": "Beim Weitergeben von Gegenständen wird manchmal der falsche Held geprüft, und die Traglast wird uneinheitlich berechnet.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "207",
+      "titel": "Gruppentrennung mit den falschen Helden",
+      "was_war_falsch": "Bei bestimmten Ereignissen, die die Gruppe aufteilen, landen die falschen Helden in der neuen Gruppe.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "356",
+      "titel": "Geld verschwindet beim Vereinen von Gruppen",
+      "was_war_falsch": "Nach dem Trennen und Vereinen mit einem NSC fehlt ein Teil des Gruppengelds, je nachdem, von welcher Gruppe aus man vereint.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "362",
+      "titel": "Schlüssel verschwindet beim Abnehmen vom Bund",
+      "was_war_falsch": "Nimmt man bei voller Gruppe einen Schlüssel vom Bund und lehnt das Ablegen ab, ist der Schlüssel verloren.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "363",
+      "titel": "Leere Gruppe hängt das Spiel auf",
+      "was_war_falsch": "Verschwindet der letzte Held einer Teilgruppe (Geldscheißer, Absturz im Schacht), hängt das Spiel.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "15",
+      "titel": "Schlüsselbund/Rezeptbuch: falsche „schon drin“-Meldung",
+      "was_war_falsch": "Kombiniert man einen unpassenden Gegenstand mit Schlüsselbund oder Rezeptbuch, heißt es manchmal fälschlich, er sei schon darin.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "26",
+      "titel": "Gruppe entfernen ändert fremdes Byte",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "52",
+      "titel": "Gegenstandssuche über alle Plätze kaputt",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "61",
+      "titel": "Gruppe teilen bei sechs Gruppen",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "81",
+      "titel": "Zufälliger Gegenstandsverlust fehlerhaft",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "82",
+      "titel": "Gegenstand an jeden Helden: Restmenge falsch",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "83",
+      "titel": "Gruppenverwaltung schreibt hinter das Feld",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "95",
+      "titel": "Leeres Zunderkästchen: doppelte oder alte Meldung",
+      "was_war_falsch": "Benutzt man ein leeres Zunderkästchen, erscheint die Meldung doppelt oder ein alter, unpassender Text.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "131",
+      "titel": "Starker Zaubertrank nennt Lebenspunkte",
+      "was_war_falsch": "Beim starken Zaubertrank spricht die Meldung von Lebens- statt Astralpunkten, und beim Lotosgift bleibt keine leere Flasche zurück.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "169",
+      "titel": "Gegenstand benutzen: fehlende Standardfälle",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "171",
+      "titel": "Heldensuche: ungenutzte fehlerhafte Funktion",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "219",
+      "titel": "Gruppenwechsel überspringt NSC-Gruppen nicht",
+      "was_war_falsch": "Beim Gruppenwechsel werden Teilgruppen, in denen nur noch der NSC handlungsfähig ist, nicht übersprungen.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Gruppe & Inventar (20)",
+      "herkunft": ""
+    },
+    {
+      "nr": "2",
+      "titel": "Automatisches Steigern ignoriert die Grenze je Talent",
+      "was_war_falsch": "Beim automatischen Stufenanstieg kann ein Talent in einer Stufe öfter steigen als erlaubt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "138",
+      "titel": "Shurinknollen-Gift: Erholung extrem langsam",
+      "was_war_falsch": "Nach einer Vergiftung mit Shurinknolle kehren Körperkraft und Gewandtheit extrem langsam zurück.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "145",
+      "titel": "Erschaffung: Eigenschaften verschieben falsch geprüft",
+      "was_war_falsch": "Das Verschieben von Eigenschaftspunkten in der Heldenerschaffung wird manchmal verweigert, obwohl es ginge, oder angeboten, obwohl es nicht geht.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "154",
+      "titel": "Blaue Keuche steckt mit Dumpfschädel an",
+      "was_war_falsch": "Wer an Blauer Keuche erkrankt, steckt die anderen mit Dumpfschädel an.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "161",
+      "titel": "Automatische Zaubersteigerung lückenhaft",
+      "was_war_falsch": "Beim automatischen Stufenanstieg werden manche Zauber übergangen oder doppelt bedacht.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "165",
+      "titel": "DSA-1-Import: Gegenstände gehen verloren",
+      "was_war_falsch": "Beim Import von Helden aus der Schicksalsklinge verlieren manche Heldentypen Gegenstände, und ein Wert wird falsch auf 1000 gesetzt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "179",
+      "titel": "Kein Hunger und Durst beim Rasten",
+      "was_war_falsch": "Während Rast und Schlaf bekommen die Helden weder Hunger noch Durst.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "214",
+      "titel": "Tanzen für Geld nutzt Musizieren",
+      "was_war_falsch": "Beim Tanzen für Geld zählt nicht der Tanzen-Wert, sondern Musizieren – ein guter Musiker verdient doppelt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "215",
+      "titel": "Tollwut-Anfall: Beruhigen gelingt verkehrt herum",
+      "was_war_falsch": "Bei einem Tollwut-Anfall gelingt das Beruhigen nur, wenn mindestens ein Held an seiner Charisma-Probe scheitert; bestehen alle, misslingt es.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "369",
+      "titel": "Kräuterwirkungen verfallen nicht, Werte kippen",
+      "was_war_falsch": "Isst ein Held viele Kräuter hintereinander, bleiben ihre Boni dauerhaft und können ins Negative umschlagen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "107",
+      "titel": "Heldenerschaffung: uninitialisierte Werte",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "116",
+      "titel": "Auto-Erschaffung: Akademiezauber doppelt bedacht",
+      "was_war_falsch": "Bei der automatischen Heldenerschaffung werden manche Akademiezauber bevorzugt gesteigert.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "152",
+      "titel": "Alchimie/Schätzen: kleine Randfehler",
+      "was_war_falsch": "Kaum sichtbar; Schätzen kann einen Preis von 0 nennen.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "178",
+      "titel": "Erschaffung: Grenzwerte uneinheitlich verglichen",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "201",
+      "titel": "Startausrüstung: Lesen hinter dem Eintrag",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "372",
+      "titel": "Nichtzauberer bekommen Zaubersteigerungen angeboten",
+      "was_war_falsch": "Ein Nichtzauberer, der in der Erschaffung zuerst als Zauberer angelegt war, bekommt beim Stufenanstieg Zauberabfragen.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Helden & Werte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "4",
+      "titel": "Nächtlicher Dieb bestiehlt nur den ersten Helden",
+      "was_war_falsch": "Bei einem nächtlichen Diebstahl im Schlafsaal fehlen nur Sachen aus dem Rucksack des ersten Helden.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "51",
+      "titel": "Herbergsdieb stiehlt nie Proviant, sondern Geld",
+      "was_war_falsch": "In einfachen Herbergen nimmt der Dieb nie Proviantpakete, sondern morgens immer Geld.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "71",
+      "titel": "Lagerhaus beim ersten Besuch manchmal gesperrt",
+      "was_war_falsch": "Beim ersten Besuch eines Lagerhauses ist es mit etwa 4 % Wahrscheinlichkeit sofort für Monate geschlossen bzw. ausgeraubt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "72",
+      "titel": "Boron-Wunder: Totenerweckung viel zu häufig",
+      "was_war_falsch": "Nach dem Boron-Wunder „Schutz vor Untoten“ erwecken weitere Boron-Wunder drei Tage lang fast immer einen toten Helden.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "78",
+      "titel": "Lagerhaus: Verderb nach einem Jahr verkehrt herum",
+      "was_war_falsch": "Wer Waren knapp über ein Jahr einlagert, verliert fast alles, wer knapp 15 Monate wartet, fast nichts.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "149",
+      "titel": "Ankunft in Lowangen: erster Textteil fehlt",
+      "was_war_falsch": "Bei einer Ankunft in Lowangen fehlt der erste Teil des Begrüßungstexts.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "155",
+      "titel": "Herberge: Abbruch löscht die alte Zimmerbuchung",
+      "was_war_falsch": "Bricht man in der Herberge eine Umbuchung ab, ist die alte Zimmerbuchung weg (das Geld kommt zurück).",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "186",
+      "titel": "Stadtereignisse: Text fehlt, gleiche Antworten",
+      "was_war_falsch": "Bei einem Stadtereignis erscheint ein Text nie, und zwei Antworten führen zum selben Text.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "206",
+      "titel": "Absturz bei der Bengram-Verwechslung in Tjolmar",
+      "was_war_falsch": "Wird ein Zwerg in Tjolmar für den Verräter Bengram gehalten und ist kaum noch ein Held einsatzfähig, kann das Spiel abstürzen; die Bettler-Spende zieht außerdem auch ohne Geld ab.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "216",
+      "titel": "Lowangen, zweites Stadttor: Unsinnstext",
+      "was_war_falsch": "Bei der Ankunft am zweiten Stadttor von Lowangen erscheint ein unsinniger Text.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "352",
+      "titel": "Lagerhaus: Waren kehren zurück, Lagerkosten explodieren",
+      "was_war_falsch": "Nach mehreren Einlagerungen werden die Lagerkosten absurd hoch und sperren das Lager, als verloren gemeldete Waren liegen beim nächsten Besuch wieder da.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "374",
+      "titel": "Markthalle Lowangen: Ereignis bleibt hängen",
+      "was_war_falsch": "Nach einem zweiten Besuch der Markthalle endet der nächste Kampf schon nach dem ersten toten Gegner, und alle anderen fliehen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "11",
+      "titel": "Marktstand mit unbekanntem Feld",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "55",
+      "titel": "Fähre Hilvalla: zu wenig Geld zeigt Begrüßung erneut",
+      "was_war_falsch": "Hat man an der Fährstation in Hilvalla zu wenig Geld, erscheint beim nächsten Mal wieder der lange Begrüßungstext.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "158",
+      "titel": "Schenke: leerer Text, merkwürdiger Rundenzähler",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "184",
+      "titel": "Straßenüberfall: Lesen hinter der Liste",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Städte & Orte (16)",
+      "herkunft": ""
+    },
+    {
+      "nr": "32",
+      "titel": "Absturz im versteckten Entwicklerbildschirm",
+      "was_war_falsch": "Im versteckten Entwicklerbildschirm (beide Umschalttasten) stürzt das Spiel ab, wenn man mehr als 40 Zeichen eintippt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "129",
+      "titel": "Speicherfehler löscht die falsche Datei",
+      "was_war_falsch": "Ist der Datenträger beim Speichern voll, bleibt der kaputte Spielstand stehen, und eine andere Datei wird gelöscht.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "197",
+      "titel": "Spielstand laden: eine Einstellung geht verloren",
+      "was_war_falsch": "Nach dem Laden eines Spielstands ist eine Spieleinstellung zurückgesetzt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "17",
+      "titel": "Speicherleck beim Verlassen der 3D-Ansicht",
+      "was_war_falsch": "Nichts Sichtbares; bei jedem Verlassen geht ein wenig Speicher verloren.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "33",
+      "titel": "Kalender: falscher Tagesüberlauf",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "34",
+      "titel": "Kalender: Tick-Überlauf verliert Restzeit",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "86",
+      "titel": "CD-Zwischenspeicher bei Lesefehlern kaputt",
+      "was_war_falsch": "Nur bei einer fehlerhaften CD kann eine kaputte Zwischenspeicher-Datei entstehen.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "88",
+      "titel": "Wegetexte: hängende Zeiger",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "91",
+      "titel": "Dateizugriff: Handle-Leck und späte Fehlerprüfung",
+      "was_war_falsch": "Nur bei Lesefehlern der Spieldaten können falsche Daten geladen werden.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "209",
+      "titel": "Speicherfehler bei über 160 MB XMS",
+      "was_war_falsch": "Nur auf Rechnern mit mehr als 160 MB XMS-Speicher wird beim Start Speicher überschrieben.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "230",
+      "titel": "CD-Prüfung bei leerer PATH.CFG",
+      "was_war_falsch": "Bei leerer Konfigurationsdatei meldet das Spiel meist, es gebe kein CD-ROM-Laufwerk.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "231",
+      "titel": "CD-Prüfung bricht ohne Aufräumen ab",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "232",
+      "titel": "Speichern: Existenzprüfung mit > statt >=",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "304",
+      "titel": "XMS-Vorgabe ohne Rücksprung",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "307",
+      "titel": "Kopierroutine verliert ungerades Byte",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Technik & Speicher (15)",
+      "herkunft": ""
+    },
+    {
+      "nr": "110",
+      "titel": "Stabzauber prüft eine Eigenschaft doppelt",
+      "was_war_falsch": "Die Probe für Stabzauber prüft eine Eigenschaft doppelt und eine andere gar nicht.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Magie (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "159",
+      "titel": "Armatrutz eine Stufe höher als die AE erlaubt",
+      "was_war_falsch": "Armatrutz bietet eine Stufe an, die mehr AE kostet, als der Held hat; der Zauber wirkt trotzdem voll und verbraucht nur die vorhandene AE.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Magie (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "166",
+      "titel": "Nihilatio Gravitas über die AE hinaus",
+      "was_war_falsch": "Nihilatio Gravitas bietet Stufen bis zur Heldenstufe an, auch wenn die AE dafür nicht reicht; der Zauber wirkt trotzdem voll.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Magie (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "173",
+      "titel": "Hexenspeichel heilt mehr, als die AE bezahlt",
+      "was_war_falsch": "Hexenspeichel müsste doppelt so viel AE kosten, wie er heilt, wird aber nie durch die vorhandene AE begrenzt – man heilt für wenig AE viel.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": true,
+      "bereich": "Magie (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "188",
+      "titel": "Zauberziel gegen Sondergegner falsch geprüft",
+      "was_war_falsch": "Gegen besondere Gegner werden manche Zauber und Gegenstände im Kampf fälschlich erlaubt oder verweigert.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Magie (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "220",
+      "titel": "Meditation mit wenig LE kostet AE",
+      "was_war_falsch": "Meditiert ein Held mit weniger als 8 LE, verliert er Astralenergie, statt sie zu gewinnen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Magie (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "377",
+      "titel": "Visibili wirkt nur auf den Zaubernden",
+      "was_war_falsch": "Visibili macht nur den Zaubernden unsichtbar, und in einer Gruppe gibt es trotzdem jeden Kampf.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Magie (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "378",
+      "titel": "Gardianum schützt nicht",
+      "was_war_falsch": "Gardianum meldet „Schutzschirm aktiv“, kostet AE, wehrt aber nichts ab.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Magie (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "48",
+      "titel": "Brenne toter Stoff ohne Fackel: Meldung zufällig",
+      "was_war_falsch": "Ohne Fackel oder Lampe erscheint beim Zauber mal die Hinweismeldung, mal passiert gar nichts.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Magie (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "148",
+      "titel": "Nichtzauberer können das Zaubermenü öffnen",
+      "was_war_falsch": "Auch Helden ohne Magie können im Heldenbogen das Zaubermenü öffnen, scheitern dann aber.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Magie (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "163",
+      "titel": "Heldenzauber: Lesen hinter der Tabelle",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Magie (11)",
+      "herkunft": ""
+    },
+    {
+      "nr": "20",
+      "titel": "Fahrender Händler: Ware bezahlt, aber nicht erhalten",
+      "was_war_falsch": "Kauft man beim fahrenden Händler mehr, als ins Gepäck passt, zahlt man alles, bekommt aber nur einen Teil.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Händler & Dienste (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "84",
+      "titel": "Laden: Ware bezahlt, aber nicht erhalten",
+      "was_war_falsch": "Kauft man im Laden mehr, als ins Gepäck passt, zahlt man alles, bekommt aber nur einen Teil.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Händler & Dienste (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "94",
+      "titel": "Laden: Gepäckwarnung fehlt oder falsch",
+      "was_war_falsch": "Die Kaufmaske warnt nicht zuverlässig, wenn die Ware nicht mehr ins Gepäck passt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Händler & Dienste (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "128",
+      "titel": "Fahrender Händler: falsche Menge beim Zurücklegen",
+      "was_war_falsch": "Beim fahrenden Händler stimmt beim Zurücklegen stapelbarer Ware manchmal die Menge nicht, und die Gepäckwarnung fehlt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Händler & Dienste (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "21",
+      "titel": "Händler-Warenliste überlappt bei riesigem Sortiment",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Händler & Dienste (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "85",
+      "titel": "Laden-Warenliste überlappt bei riesigem Sortiment",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Händler & Dienste (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "126",
+      "titel": "Großer AP-Bonus im Gespräch wird nie vergeben",
+      "was_war_falsch": "Bei zwei Gesprächsbelohnungen gibt es immer nur den kleinen Abenteuerpunkte-Bonus, nie den großen.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dialoge (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "135",
+      "titel": "Gespräch mit Gegenstandswahl lässt sich nicht abbrechen",
+      "was_war_falsch": "In einem Gespräch, das einen Gegenstand verlangt, lässt sich die Auswahl nicht abbrechen; trägt niemand etwas, hängt das Spiel.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dialoge (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "174",
+      "titel": "Unmut eines Gesprächspartners wird vergessen",
+      "was_war_falsch": "Hat man einen Gesprächspartner verärgert, kann sein Unmut später ohne Grund vergessen sein.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dialoge (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "375",
+      "titel": "Agdan-Quest: kein Lowangen-Schlüssel",
+      "was_war_falsch": "Hat der erste Held keinen Platz, bekommt die Gruppe den Lowangen-Schlüssel nicht, obwohl das Gespräch ihn übergibt.",
+      "so_pruefst_du_es": "",
+      "stufe": "Wichtig",
+      "exploit": false,
+      "bereich": "Dialoge (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "67",
+      "titel": "Dialogskript: Zeiger nicht genullt",
+      "was_war_falsch": "Nichts Sichtbares.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dialoge (6)",
+      "herkunft": ""
+    },
+    {
+      "nr": "227",
+      "titel": "Dialogskript: Vergleich mit leerem Feld",
+      "was_war_falsch": "Nichts – der Fehler tritt im Spiel nicht auf.",
+      "so_pruefst_du_es": "",
+      "stufe": "nur Alle",
+      "exploit": false,
+      "bereich": "Dialoge (6)",
+      "herkunft": ""
+    }
+  ],
+  "zusatzfunktionen": [
+    {
+      "titel": "Live-Probenlog (inkl. Stufenanstieg seit v1.3)",
+      "version": "v1.2 / v1.3",
+      "stufe": "ab Wichtige (Haken „Probenlog“)",
+      "text": "Zeigt live in einem zweiten Fenster neben dem Spiel (sowie in PROBEN.CSV und Probenlog_Sternenschweif.html) jede Probe: Eigenschaftsproben mit Wert, Zuschlag, W20 und Ergebnis, Talent- und Zauberproben mit allen drei Eigenschaften, jedem der drei W20 und Restpunkten, Fernkampf sowie jede Attacke und Parade im Kampf. Seit v1.3 werden auch alle Würfe beim Stufenanstieg (Talente, Zauber, Eigenschaften, LE/AE-Wurf und AE-Tausch) mitgeschrieben."
+    },
+    {
+      "titel": "Angepasste DOSBox-Mausempfindlichkeit & Spielstands-Ablage",
+      "version": "v1.1.1 / v1.2",
+      "stufe": "Alle Fix-Stufen (Windows, DOSBox & Linux)",
+      "text": "Verhindert das zu schnelle Rasen des Mauszeigers in der DOS-Fassung von Sternenschweif auf großen Bildschirmen, lässt den Original-Spielordner komplett unangetastet und unterstützt Windows (nativ & DOSBox), Linux (nativ & DOSBox/Staging) sowie den Browser."
+    }
+  ]
+}
